@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/mmx_margin"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="@dimen/mmx_padding">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- reset form -->
+            <!--<Button-->
+                <!--android:id="@+id/resetButton"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:layout_margin="10dp"-->
+                <!--android:paddingLeft="30dp"-->
+                <!--android:paddingRight="30dp"-->
+                <!--android:text="@string/reset" />-->
+
+            <!-- Account -->
+            <com.vanluom.group11.quanlytaichinhcanhan.view.RobotoTextView
+                style="?attr/headerTextViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/account" />
+
+            <Spinner
+                android:id="@+id/spinnerAccount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <requestFocus />
+            </Spinner>
+
+            <!-- Transaction Type -->
+            <com.vanluom.group11.quanlytaichinhcanhan.view.RobotoTextView
+                style="?attr/headerTextViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/transaction_type" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.vanluom.group11.quanlytaichinhcanhan.view.RobotoCheckBox
+                    android:id="@+id/checkBoxWithdrawal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/withdrawal"
+                    android:maxLines="1" />
+
+                <com.vanluom.group11.quanlytaichinhcanhan.view.RobotoCheckBox
+                    android:id="@+id/checkBoxDeposit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/deposit"
+                    android:maxLines="1" />
+
+                <com.vanluom.group11.quanlytaichinhcanhan.view.RobotoCheckBox
+                    android:id="@+id/checkBoxTransfer"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/transfer"
+                    android:maxLines="1" />
+            </LinearLayout>
+
+            <com.vanluom.group11.quanlytaichinhcanhan.view.RobotoTextView
+                style="?attr/headerTextViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/transaction_status" />
+
+            <Spinner
+                android:id="@+id/spinnerStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:prompt="@string/status" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <com.vanluom.group11.quanlytaichinhcanhan.view.RobotoTextView
+                    android:id="@+id/textViewFromAmount"
+                    style="?attr/holoSpinnerStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:hint="@string/amount_from"
+                    android:textStyle="bold"
+                    android:maxLines="1" />
+
+                <com.vanluom.group11.quanlytaichinhcanhan.view.RobotoTextView
+                    android:id="@+id/textViewToAmount"
+                    style="?attr/holoSpinnerStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:hint="@string/amount_to"
+                    android:textStyle="bold"
+                    android:maxLines="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.vanluom.group11.quanlytaichinhcanhan.view.RobotoTextView
+                    android:id="@+id/textViewFromDate"
+                    style="?attr/holoSpinnerStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:hint="@string/from_date"
+                    android:textStyle="bold" />
+
+                <com.vanluom.group11.quanlytaichinhcanhan.view.RobotoTextView
+                    android:id="@+id/textViewToDate"
+                    style="?attr/holoSpinnerStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:hint="@string/to_date"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <com.vanluom.group11.quanlytaichinhcanhan.view.RobotoTextView
+                android:id="@+id/textViewSelectPayee"
+                style="?attr/holoSpinnerStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:hint="@string/select_payee" />
+
+            <com.vanluom.group11.quanlytaichinhcanhan.view.RobotoTextView
+                android:id="@+id/textViewSelectCategory"
+                style="?attr/holoSpinnerStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:hint="@string/select_category" />
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.vanluom.group11.quanlytaichinhcanhan.view.RobotoEditText
+                    android:id="@+id/editTextTransNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/transaction_number" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.vanluom.group11.quanlytaichinhcanhan.view.RobotoEditTextFontIcon
+                    android:id="@+id/editTextNotes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/mmx_padding"
+                    android:gravity="top|start"
+                    android:hint="@string/notes"
+                    android:inputType="textMultiLine"
+                    android:scrollHorizontally="false"
+                    android:textCursorDrawable="@null"
+                    app:iconLeft="@xml/ic_clipboard_small" />
+            </android.support.design.widget.TextInputLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

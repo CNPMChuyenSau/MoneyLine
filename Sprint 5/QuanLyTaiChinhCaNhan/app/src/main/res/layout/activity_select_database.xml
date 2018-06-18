@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_select_database"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.vanluom.group11.quanlytaichinhcanhan.home.SelectDatabaseActivity">
+
+    <include layout="@layout/toolbar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/mmx_activity_vertical_margin"
+            android:paddingLeft="@dimen/mmx_activity_horizontal_margin"
+            android:paddingRight="@dimen/mmx_activity_horizontal_margin"
+            android:paddingTop="@dimen/mmx_activity_vertical_margin"
+            android:orientation="vertical">
+
+        <!-- Intro -->
+        <com.vanluom.group11.quanlytaichinhcanhan.view.RobotoTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:text="@string/intro_text" />
+
+        <!-- Create Database text -->
+        <com.vanluom.group11.quanlytaichinhcanhan.view.RobotoTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:text="@string/intro_create_db" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/RaisedButton">
+                <com.vanluom.group11.quanlytaichinhcanhan.view.RobotoButton
+                    android:id="@+id/createDatabaseButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/create_db" />
+            </LinearLayout>
+
+        <!-- Open Database text -->
+        <com.vanluom.group11.quanlytaichinhcanhan.view.RobotoTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:text="@string/intro_open_db" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/RaisedButton">
+            <com.vanluom.group11.quanlytaichinhcanhan.view.RobotoButton
+                android:id="@+id/openDatabaseButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/open_database" />
+        </LinearLayout>
+
+        <!-- Configure Synchronisation text -->
+        <com.vanluom.group11.quanlytaichinhcanhan.view.RobotoTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:text="@string/intro_sync" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/RaisedButton">
+            <com.vanluom.group11.quanlytaichinhcanhan.view.RobotoButton
+                android:id="@+id/setupSyncButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/configure_sync" />
+        </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

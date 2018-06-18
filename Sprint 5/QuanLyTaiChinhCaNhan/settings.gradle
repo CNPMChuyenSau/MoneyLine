@@ -1,0 +1,2 @@
+
+include ':app', ':androidSVG_12', ':money', ':MMEX Icon Font'

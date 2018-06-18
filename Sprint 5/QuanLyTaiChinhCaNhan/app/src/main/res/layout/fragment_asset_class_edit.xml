@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:paddingLeft="@dimen/mmx_activity_horizontal_margin"
+              android:paddingRight="@dimen/mmx_activity_horizontal_margin"
+              android:paddingTop="@dimen/mmx_activity_vertical_margin"
+              android:paddingBottom="@dimen/mmx_activity_vertical_margin"
+              tools:context="com.vanluom.group11.quanlytaichinhcanhan.assetallocation.AssetClassEditFragment">
+
+    <!--<ScrollView-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="fill_parent"-->
+        <!--android:fillViewport="true"-->
+        <!--android:orientation="vertical">-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/mmx_activity_side_padding"
+            android:paddingRight="@dimen/mmx_activity_side_padding">
+
+            <!-- todo: parent asset class -->
+            <com.vanluom.group11.quanlytaichinhcanhan.view.RobotoTextView
+                style="@style/Money.TextView.Header.Caption"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/parent"/>
+            <com.vanluom.group11.quanlytaichinhcanhan.view.RobotoTextViewFontIcon
+                android:id="@+id/parentAssetClass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Money.TextView.Widget.EditText"
+                android:gravity="top|start"
+                android:hint="@string/parent"
+                android:scrollHorizontally="false"
+                android:textCursorDrawable="@null" />
+
+            <!-- Stock Name -->
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <!--<com.money.manager.ex.view.RobotoTextView-->
+                <!--style="@style/Money.TextView.Header.Caption"-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="@string/name"/>-->
+            <com.vanluom.group11.quanlytaichinhcanhan.view.RobotoEditTextFontIcon
+                android:id="@+id/nameEdit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/mmx_padding"
+                android:gravity="top|start"
+                android:hint="@string/asset_class_name"
+                android:inputType="text"
+                android:maxLength="1000"
+                android:scrollHorizontally="false"
+                android:textCursorDrawable="@null" />
+            </android.support.design.widget.TextInputLayout>
+
+            <!-- Allocation -->
+            <com.vanluom.group11.quanlytaichinhcanhan.view.RobotoTextView
+                style="@style/Money.TextView.Header.Caption"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/allocation"/>
+            <!--<com.money.manager.ex.view.RobotoTextViewFontIcon-->
+                <!--android:id="@+id/allocationEdit"-->
+                <!--style="@style/Money.TextView.Widget.EditText"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--app:iconLeft="@xml/ic_hash_small"-->
+                <!--android:textStyle="bold"-->
+                <!--android:gravity="end" />-->
+            <com.vanluom.group11.quanlytaichinhcanhan.view.RobotoTextView
+                android:id="@+id/allocationEdit"
+                style="@style/Money.TextView.Widget.EditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:gravity="end" />
+
+            <!-- Allocation -->
+            <com.vanluom.group11.quanlytaichinhcanhan.view.RobotoTextView
+                style="@style/Money.TextView.Header.Caption"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/sort_order"/>
+            <com.vanluom.group11.quanlytaichinhcanhan.view.RobotoTextViewFontIcon
+                android:id="@+id/sortOrderEdit"
+                style="@style/Money.TextView.Widget.EditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:iconLeft="@xml/ic_sort_asc"
+                android:textStyle="bold"
+                android:gravity="end" />
+
+        </LinearLayout>
+
+
+    <!--</ScrollView>-->
+</LinearLayout>

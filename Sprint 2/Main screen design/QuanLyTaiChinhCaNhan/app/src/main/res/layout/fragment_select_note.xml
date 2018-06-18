@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    android:background="@color/BackgroudForm"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/selector_listview_one">
+        <RadioGroup
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp">
+            <RadioButton
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:text="@string/ThuChi"
+                android:id="@+id/radioButtonThuChi"
+                android:checked="false" />
+            <RadioButton
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:text="@string/Thu"
+                android:id="@+id/radioButtonThu"
+                android:checked="false" />
+
+            <RadioButton
+                android:textStyle="bold"
+                android:layout_marginLeft="9dp"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:text="@string/Chi"
+                android:id="@+id/radioButtonChi"
+                android:checked="true" />
+
+
+        </RadioGroup>
+        <RadioGroup
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp">
+            <RadioButton
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:textSize="9dp"
+                android:text="@string/TatCa"
+                android:id="@+id/radioButtonTatca"
+                android:checked="false" />
+            <RadioButton
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:textSize="9dp"
+                android:text="@string/HomNay"
+                android:id="@+id/radioButtonHomnay"
+                android:checked="false" />
+
+            <RadioButton
+                android:textStyle="bold"
+                android:layout_marginLeft="9dp"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:textSize="9dp"
+                android:text="@string/TuanNay"
+                android:id="@+id/radioButtonTuanNay"
+                android:checked="true" />
+
+            <RadioButton
+                android:textStyle="bold"
+                android:layout_marginLeft="9dp"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:textSize="9dp"
+                android:text="@string/ThangNay"
+                android:id="@+id/radioButtonThangNay"
+                android:checked="false" />
+            <RadioButton
+                android:textStyle="bold"
+                android:layout_marginLeft="9dp"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:text="@string/NamNay"
+                android:textSize="9dp"
+                android:id="@+id/radioButtonNamNay"
+                android:checked="false" />
+        </RadioGroup>
+        <ListView
+            android:id="@+id/listviewNote"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:divider="#000000"
+            android:dividerHeight="1dp" >
+        </ListView>
+    </LinearLayout>
+</LinearLayout>

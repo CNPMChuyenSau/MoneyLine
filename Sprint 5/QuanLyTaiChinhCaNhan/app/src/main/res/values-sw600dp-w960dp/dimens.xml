@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<!--
+    Landscape mode (when available width is at least 960).
+
+    https://developer.android.com/guide/practices/screens_support.html#qualifiers
+-->
+<resources>
+    <dimen name="mmx_activity_side_padding">48dp</dimen>
+
+    <dimen name="input_dialog_button_height">72dp</dimen>
+</resources>

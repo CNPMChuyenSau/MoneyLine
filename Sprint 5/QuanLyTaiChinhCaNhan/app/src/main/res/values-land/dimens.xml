@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<resources>
+    <!-- floating action button -->
+    <dimen name="fab_margin_bottom_home_fragment">32dp</dimen>
+    <dimen name="fab_margin_bottom_higher">52dp</dimen>
+
+    <!-- font size amount binaryDialog -->
+    <dimen name="input_dialog_text_size">32sp</dimen>
+    <dimen name="input_dialog_button_height">52dp</dimen>
+    <dimen name="input_dialog_linear_button_height">52dp</dimen>
+</resources>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingTranslation">
+
+    <string name="view_user_size">user_size</string>
+    <string name="application_copyright" translatable="false">© 2018 Android MoneyLine Project</string>
+    <!-- text from android manifest -->
+    <string name="dashclock_extension_summary">Displays the summary of MoneyLine for Android</string>
+    <string name="dashclock_extension_summary_all_account">View the summary of each account MoneyLine for Android</string>
+
+</resources>

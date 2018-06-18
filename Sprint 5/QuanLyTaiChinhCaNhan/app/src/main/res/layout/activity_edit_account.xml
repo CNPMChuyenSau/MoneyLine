@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="@dimen/mmx_activity_side_margin"
+    android:layout_marginRight="@dimen/mmx_activity_side_margin"
+    android:animateLayoutChanges="true"
+    android:background="?attr/theme_background_color"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/mmx_activity_side_padding"
+            android:paddingRight="@dimen/mmx_activity_side_padding">
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.vanluom.group11.quanlytaichinhcanhan.view.RobotoEditText
+                    android:id="@+id/editTextAccountName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:hint="@string/account_name"
+                    android:inputType="text"
+                    android:maxLength="100"
+                    android:maxLines="1" />
+            </android.support.design.widget.TextInputLayout>
+
+            <!-- favourite, default -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <!-- default -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/defaultAccountCheckbox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <com.vanluom.group11.quanlytaichinhcanhan.view.RobotoTextView
+                        android:id="@+id/defaultAccountText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/mmx_margin"
+                        android:text="@string/default_account" />
+                </LinearLayout>
+                <!-- favourite -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+
+                    <com.shamanland.fonticon.FontIconView
+                        android:id="@+id/imageViewAccountFav"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/md_primary"
+                        android:text="@string/ic_star_outline"
+                        android:textColor="@color/material_white"
+                        android:textSize="@dimen/fonticon_drawer" />
+                    <!--android:layout_gravity="center"-->
+                    <com.vanluom.group11.quanlytaichinhcanhan.view.RobotoTextView
+                        android:id="@+id/favouriteAccountTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/mmx_margin"
+                        android:text="@string/favourite_account" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <com.vanluom.group11.quanlytaichinhcanhan.view.RobotoTextView
+                style="?attr/headerTextViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/account_type" />
+
+            <Spinner
+                android:id="@+id/spinnerAccountType"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:prompt="@string/account_type"
+                android:spinnerMode="dropdown" />
+
+            <!-- Currency -->
+            <com.vanluom.group11.quanlytaichinhcanhan.view.RobotoTextView
+                style="?attr/headerTextViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/select_currency" />
+
+            <com.vanluom.group11.quanlytaichinhcanhan.view.RobotoTextView
+                android:id="@+id/textViewSelectCurrency"
+                style="?attr/holoSpinnerStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:textStyle="bold" />
+
+            <!-- Initial Balance -->
+            <com.vanluom.group11.quanlytaichinhcanhan.view.RobotoTextView
+                style="?attr/headerTextViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/initial_balance" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/spinnerSymbolInitialBalance"
+                    android:layout_width="48dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textStyle="bold" />
+
+                <com.vanluom.group11.quanlytaichinhcanhan.view.RobotoTextView
+                    android:id="@+id/editTextInitialBalance"
+                    style="?attr/holoSpinnerStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <com.vanluom.group11.quanlytaichinhcanhan.view.RobotoTextView
+                style="?attr/headerTextViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/account_status" />
+
+            <Spinner
+                android:id="@+id/spinnerAccountStatus"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:prompt="@string/account_status" />
+
+            <!-- Account Number -->
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.vanluom.group11.quanlytaichinhcanhan.view.RobotoEditText
+                    android:id="@+id/editTextAccountNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/account_number"
+                    android:inputType="number"
+                    android:maxLength="100"
+                    android:maxLines="1" />
+            </android.support.design.widget.TextInputLayout>
+
+            <!-- Held at -->
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.vanluom.group11.quanlytaichinhcanhan.view.RobotoEditText
+                    android:id="@+id/editTextAccountHeldAt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/account_held_at"
+                    android:inputType="text"
+                    android:maxLength="100"
+                    android:maxLines="1" />
+            </android.support.design.widget.TextInputLayout>
+
+            <!-- Website -->
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.vanluom.group11.quanlytaichinhcanhan.view.RobotoEditText
+                    android:id="@+id/editTextWebsite"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/website"
+                    android:inputType="text"
+                    android:maxLength="100"
+                    android:singleLine="true" />
+            </android.support.design.widget.TextInputLayout>
+
+            <!-- Contact -->
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.vanluom.group11.quanlytaichinhcanhan.view.RobotoEditText
+                    android:id="@+id/editTextContact"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/contact"
+                    android:inputType="textPersonName"
+                    android:maxLength="100"
+                    android:maxLines="1" />
+            </android.support.design.widget.TextInputLayout>
+
+            <!-- Access info -->
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.vanluom.group11.quanlytaichinhcanhan.view.RobotoEditText
+                    android:id="@+id/editTextAccessInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/access_info"
+                    android:inputType="text"
+                    android:maxLength="100"
+                    android:singleLine="true" />
+            </android.support.design.widget.TextInputLayout>
+
+            <!-- Notes -->
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.vanluom.group11.quanlytaichinhcanhan.view.RobotoEditTextFontIcon
+                    android:id="@+id/editTextNotes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/mmx_padding"
+                    android:gravity="top|start"
+                    android:hint="@string/notes"
+                    android:inputType="textMultiLine|textCapSentences"
+                    android:scrollHorizontally="false"
+                    android:textCursorDrawable="@null"
+                    app:iconLeft="@xml/ic_clipboard_small" />
+            </android.support.design.widget.TextInputLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!--<include layout="@layout/action_buttons" />-->
+</LinearLayout>

@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout android:orientation="horizontal"
+        android:id="@+id/lnHead"
+        android:background="@color/background_Regis_Login"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:baselineAligned="false">
+
+        <TextView android:gravity="center"
+            android:layout_gravity="center"
+            android:id="@+id/TitelTickerAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/TaiKhoanLoai"
+            android:layout_weight="1.0"
+            style="@style/TextHeader"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_listview_one"
+        android:layout_marginTop="4dp"
+        android:id="@+id/lnSelectTypeAccount1">
+        <ImageView android:layout_width="50.0dip"
+            android:layout_height="50.0dip"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/account_wallet"
+            android:contentDescription="@string/ContentDescriptionImageNull"
+            android:id="@+id/imageview_account" />
+        <TextView android:gravity="center_vertical"
+            android:id="@+id/AccountTicke1"
+            android:layout_width="0.0dip"
+            android:text="@string/TienMat"
+            android:layout_height="50.0dip"
+            android:layout_marginLeft="10.0dip"
+            android:layout_weight="1.0"
+            style="@style/GroupExpandValue"
+            />
+
+        <ImageView android:id="@+id/imageViewchecked11"
+            android:layout_width="32.0dip"
+            android:layout_height="32.0dip"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/checkedenable"
+            android:contentDescription="@string/NoImage"
+            />
+
+    </LinearLayout>
+    <View android:background="@color/Line"
+        android:layout_width="match_parent"
+        android:layout_height="1.0dip"
+        />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_listview_one"
+        android:id="@+id/lnSelectTypeAccount2">
+        <ImageView android:layout_width="50.0dip"
+            android:layout_height="50.0dip"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/account_bank"
+            android:contentDescription="@string/ContentDescriptionImageNull"
+            android:id="@+id/imageview_account"
+            android:layout_weight="0.01" />
+        <TextView
+            style="@style/GroupExpandValue"
+            android:gravity="center_vertical"
+            android:id="@+id/AccountTicke2"
+            android:text="@string/TheATM"
+
+            android:layout_width="0.0dip"
+            android:layout_height="50.0dip"
+            android:layout_marginLeft="10.0dip"
+            android:layout_weight="1.0" />
+
+        <ImageView
+            android:id="@+id/imageViewchecked22"
+            android:layout_width="32.0dip"
+            android:layout_height="32.0dip"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/checkedenable"
+            android:contentDescription="@string/NoImage" />
+    </LinearLayout>
+    <View android:background="@color/Line"
+        android:layout_width="match_parent"
+        android:layout_height="1.0dip"
+        />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_listview_one"
+        android:id="@+id/lnSelectTypeAccount3">
+        <ImageView android:layout_width="50.0dip"
+            android:layout_height="50.0dip"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/account_master"
+            android:contentDescription="@string/ContentDescriptionImageNull"
+            android:id="@+id/imageview_account"
+            android:layout_weight="0.01" />
+        <TextView
+            style="@style/GroupExpandValue"
+            android:gravity="center_vertical"
+            android:id="@+id/AccountTicke3"
+            android:text="@string/TaiKhoanNganHang"
+
+            android:layout_width="0.0dip"
+            android:layout_height="50.0dip"
+            android:layout_marginLeft="10.0dip"
+            android:layout_weight="1.0" />
+
+        <ImageView
+            android:id="@+id/imageViewchecked3"
+            android:layout_width="32.0dip"
+            android:layout_height="32.0dip"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/checkedenable"
+            android:contentDescription="@string/NoImage" />
+    </LinearLayout>
+
+    <View android:background="@color/Line"
+        android:layout_width="match_parent"
+        android:layout_height="1.0dip"
+        />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_listview_one"
+        android:id="@+id/lnSelectTypeAccount4">
+        <ImageView android:layout_width="50.0dip"
+            android:layout_height="50.0dip"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/account_pig"
+            android:contentDescription="@string/ContentDescriptionImageNull"
+            android:id="@+id/imageview_account"
+            android:layout_weight="0.01" />
+        <TextView
+            style="@style/GroupExpandValue"
+            android:gravity="center_vertical"
+            android:id="@+id/AccountTicke4"
+            android:text="@string/SoTietKiem"
+
+            android:layout_width="0.0dip"
+            android:layout_height="50.0dip"
+            android:layout_marginLeft="10.0dip"
+            android:layout_weight="1.0" />
+
+        <ImageView
+            android:id="@+id/imageViewchecked4"
+            android:layout_width="32.0dip"
+            android:layout_height="32.0dip"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/checkedenable"
+            android:contentDescription="@string/NoImage" />
+    </LinearLayout>
+    <View android:background="@color/Line"
+        android:layout_width="match_parent"
+        android:layout_height="1.0dip"
+        />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_listview_one"
+        android:id="@+id/lnSelectTypeAccount5">
+        <ImageView android:layout_width="50.0dip"
+            android:layout_height="50.0dip"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/account_other"
+            android:contentDescription="@string/ContentDescriptionImageNull"
+            android:id="@+id/imageview_account"
+            android:layout_weight="0.01" />
+        <TextView
+            style="@style/GroupExpandValue"
+            android:gravity="center_vertical"
+            android:id="@+id/AccountTicke5"
+            android:text="@string/TaiKhoanKhac"
+
+            android:layout_width="0.0dip"
+            android:layout_height="50.0dip"
+            android:layout_marginLeft="10.0dip"
+            android:layout_weight="1.0" />
+
+        <ImageView
+            android:id="@+id/imageViewchecked5"
+            android:layout_width="32.0dip"
+            android:layout_height="32.0dip"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/checkedenable"
+            android:contentDescription="@string/NoImage" />
+    </LinearLayout>
+
+</LinearLayout>

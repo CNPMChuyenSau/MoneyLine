@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/date_time"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout android:orientation="horizontal"
+        android:id="@+id/lnHead"
+        android:background="@color/background_Regis_Login"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false">
+        <ImageView android:id="@+id/btnBack"
+            android:background="@drawable/selector_button_back"
+            android:padding="10.0dip"
+            android:clickable="false"
+            android:layout_width="50.0dip"
+            android:layout_height="50.0dip"
+            android:src="@drawable/iconap"
+            android:contentDescription="@string/NoImage"
+            />
+        <TextView android:gravity="center"
+            android:layout_gravity="center"
+            android:id="@+id/txtDate"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10.0dip"
+            android:text="@string/Ngayss"
+            android:layout_weight="1.0"
+            style="@style/TextHeader"
+            />
+        <Button android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:id="@+id/btnNow"
+            android:background="@drawable/selector_button_save_gray"
+            android:layout_width="50.0dip"
+            android:layout_height="30.0dip"
+            android:layout_marginRight="10.0dip"
+            android:text="@string/HomNay"
+            style="@style/TextHeaderAction"
+            android:layout_weight="0.08" />
+    </LinearLayout>
+    <TabHost
+        android:id="@+id/tab_host"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TabWidget
+                android:background="@color/white"
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:id="@+id/date_content"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <DatePicker
+                        android:id="@+id/date_picker"
+                        android:background="@color/white"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:calendarViewShown="false" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/time_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TimePicker
+                        android:background="@color/white"
+                        android:id="@+id/time_picker"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </TabHost>
+
+</LinearLayout>

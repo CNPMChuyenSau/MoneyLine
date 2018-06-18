@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/mmx_list_item_height"
+    android:clickable="true"
+    android:focusable="true"
+    android:background="?android:attr/selectableItemBackground"
+    android:paddingStart="@dimen/mmx_list_item_padding_side"
+    android:paddingLeft="@dimen/mmx_list_item_padding_side"
+    android:paddingEnd="@dimen/mmx_list_item_padding_side"
+    android:paddingRight="@dimen/mmx_list_item_padding_side">
+
+    <com.vanluom.group11.quanlytaichinhcanhan.view.RobotoTextViewFontIcon
+        android:id="@+id/nameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"/>
+</LinearLayout>

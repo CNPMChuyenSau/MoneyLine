@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="1dp">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/imageView"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/account_login" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#2916d9"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Vương Trùng Dương"
+                android:id="@+id/tvTen" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Con"
+                android:id="@+id/tvRelationship" />
+        </LinearLayout>
+        <LinearLayout android:gravity="right"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView android:id="@+id/imgTicked"
+                android:background="@drawable/checkedenable"
+                android:layout_width="50.0dip"
+                android:layout_height="50.0dip"
+                android:layout_marginRight="2.0dip"
+                android:contentDescription="@string/ContentDescriptionImageNull"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,331 @@
+
+package com.vanluom.group11.quanlytaichinhcanhan.settings;
+
+
+import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v7.preference.ListPreference;
+import android.support.v7.preference.Preference;
+import android.support.v7.preference.PreferenceFragmentCompat;
+import android.text.TextUtils;
+
+import com.afollestad.materialdialogs.DialogAction;
+import com.afollestad.materialdialogs.MaterialDialog;
+import com.vanluom.group11.quanlytaichinhcanhan.Constants;
+import com.vanluom.group11.quanlytaichinhcanhan.MoneyManagerApplication;
+import com.vanluom.group11.quanlytaichinhcanhan.R;
+import com.vanluom.group11.quanlytaichinhcanhan.core.Core;
+import com.vanluom.group11.quanlytaichinhcanhan.core.InfoKeys;
+import com.vanluom.group11.quanlytaichinhcanhan.core.UIHelper;
+import com.vanluom.group11.quanlytaichinhcanhan.currency.CurrencyService;
+import com.vanluom.group11.quanlytaichinhcanhan.currency.list.CurrencyListActivity;
+import com.vanluom.group11.quanlytaichinhcanhan.datalayer.AccountRepository;
+import com.vanluom.group11.quanlytaichinhcanhan.domainmodel.Account;
+import com.vanluom.group11.quanlytaichinhcanhan.domainmodel.Currency;
+import com.vanluom.group11.quanlytaichinhcanhan.servicelayer.AccountService;
+import com.vanluom.group11.quanlytaichinhcanhan.servicelayer.InfoService;
+
+import org.apache.commons.lang3.math.NumberUtils;
+
+import java.util.List;
+
+import timber.log.Timber;
+
+/**
+ * A simple {@link Fragment} subclass.
+ */
+public class PerDatabaseFragment
+    extends PreferenceFragmentCompat {
+
+    public static final int REQUEST_PICK_CURRENCY = 1;
+
+    public PerDatabaseFragment() {
+        // Required empty public constructor
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+    }
+
+    @Override
+    public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
+        addPreferencesFromResource(R.xml.preferences_per_database);
+
+        initializeControls();
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        switch (requestCode) {
+            case REQUEST_PICK_CURRENCY:
+                // Returning from the currency picker screen.
+                if ((resultCode == Activity.RESULT_OK) && (data != null)) {
+                    int currencyId = data.getIntExtra(CurrencyListActivity.INTENT_RESULT_CURRENCYID, -1);
+                    // set preference
+                    CurrencyService utils = new CurrencyService(getActivity());
+                    utils.setBaseCurrencyId(currencyId);
+                    // refresh the displayed value.
+                    showCurrentDefaultCurrency();
+
+                    // notify the user to update exchange rates!
+                    showCurrencyChangeNotification();
+                }
+                break;
+        }
+    }
+
+    private void initializeControls() {
+        final InfoService infoService = new InfoService(getActivity());
+
+        // Username
+
+        final Preference pUserName = findPreference(getString(R.string.pref_user_name));
+        if (pUserName != null) {
+            pUserName.setSummary(MoneyManagerApplication.getApp().getUserName());
+            pUserName.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                @Override
+                public boolean onPreferenceChange(Preference preference, Object newValue) {
+                    MoneyManagerApplication.getApp().setUserName((String) newValue, true);
+                    pUserName.setSummary(MoneyManagerApplication.getApp().getUserName());
+                    return false;
+                }
+            });
+        }
+
+        // Date format
+
+        final ListPreference lstDateFormat = (ListPreference) findPreference(getString(R.string.pref_date_format));
+        if (lstDateFormat != null) {
+            lstDateFormat.setEntries(getResources().getStringArray(R.array.date_format));
+            lstDateFormat.setEntryValues(getResources().getStringArray(R.array.date_format_mask));
+            //set summary
+            String value = infoService.getInfoValue(InfoKeys.DATEFORMAT);
+            lstDateFormat.setSummary(getDateFormatFromMask(value));
+            lstDateFormat.setValue(value);
+
+            //on change
+            lstDateFormat.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+
+                @Override
+                public boolean onPreferenceChange(Preference preference, Object newValue) {
+                    if (infoService.setInfoValue(InfoKeys.DATEFORMAT, (String) newValue)) {
+                        lstDateFormat.setSummary(getDateFormatFromMask((String) newValue));
+                    }
+                    // Do not update to preferences file.
+                    return false;
+                }
+            });
+        }
+
+        // Base Currency
+
+        initBaseCurrency();
+
+        // financial year, day and month
+
+        final Preference pFinancialDay = findPreference(getString(PreferenceConstants.PREF_FINANCIAL_YEAR_STARTDATE));
+        if (pFinancialDay != null) {
+            pFinancialDay.setSummary(infoService.getInfoValue(InfoKeys.FINANCIAL_YEAR_START_DAY));
+            if (pFinancialDay.getSummary() != null) {
+                pFinancialDay.setDefaultValue(pFinancialDay.getSummary().toString());
+            }
+
+            pFinancialDay.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                @Override
+                public boolean onPreferenceChange(Preference preference, Object newValue) {
+                    int day;
+                    try {
+                        day = Integer.parseInt((String) newValue);
+                    } catch (NumberFormatException e) {
+                        new UIHelper(getActivity()).showToast(R.string.error_parsing_value);
+                        return false;
+                    }
+
+                    try {
+                        if (day < 1 || day > 31) {
+                            return false;
+                        }
+                        if (infoService.setInfoValue(InfoKeys.FINANCIAL_YEAR_START_DAY, Integer.toString(day))) {
+                            pFinancialDay.setSummary(Integer.toString(day));
+                        }
+//                        return true;
+                    } catch (Exception e) {
+                        Timber.e(e, "changing the start day of the financial year");
+                    }
+                    return false;
+                }
+            });
+        }
+
+        final Core core = new Core(getActivity().getApplicationContext());
+
+        // Financial year/month
+
+        final ListPreference lstFinancialMonth = (ListPreference) findPreference(getString(PreferenceConstants.PREF_FINANCIAL_YEAR_STARTMONTH));
+        if (lstFinancialMonth != null) {
+            lstFinancialMonth.setEntries(core.getListMonths());
+            lstFinancialMonth.setEntryValues(new String[]{"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"});
+            lstFinancialMonth.setDefaultValue("0");
+            // get current month
+            try {
+                String currentMonth = infoService.getInfoValue(InfoKeys.FINANCIAL_YEAR_START_MONTH);
+                if ((!TextUtils.isEmpty(currentMonth)) && NumberUtils.isNumber(currentMonth)) {
+                    int month = Integer.parseInt(currentMonth) - 1;
+                    if (month > -1 && month < lstFinancialMonth.getEntries().length) {
+                        lstFinancialMonth.setSummary(lstFinancialMonth.getEntries()[month]);
+                        lstFinancialMonth.setValue(Integer.toString(month));
+                    }
+                }
+            } catch (Exception e) {
+                Timber.e(e, "showing the month of the financial year");
+            }
+            lstFinancialMonth.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+
+                @Override
+                public boolean onPreferenceChange(Preference preference, Object newValue) {
+                    try {
+                        int value = Integer.parseInt(newValue.toString());
+                        if (value > -1 && value < lstFinancialMonth.getEntries().length) {
+                            if (infoService.setInfoValue(InfoKeys.FINANCIAL_YEAR_START_MONTH, Integer.toString(value + 1))) {
+                                lstFinancialMonth.setSummary(lstFinancialMonth.getEntries()[value]);
+//                                return true;
+                            }
+                        }
+                    } catch (Exception e) {
+                        Timber.e(e, "changing the month of the financial year");
+//                        return false;
+                    }
+                    return false;
+                }
+            });
+        }
+
+        initDefaultAccount();
+    }
+
+    /**
+     * select the base currency in a currency picker instead of a list.
+     */
+    private void initBaseCurrency() {
+        Preference baseCurrency = findPreference(getString(PreferenceConstants.PREF_BASE_CURRENCY));
+        if (baseCurrency == null) return;
+
+        // Display the current default currency as the summary.
+        showCurrentDefaultCurrency();
+
+        // After the currency is selected in the Currencies screen, the change is handled
+        // in onActivityResult
+
+        Preference.OnPreferenceClickListener clickListener = new Preference.OnPreferenceClickListener() {
+            @Override
+            public boolean onPreferenceClick(Preference preference) {
+                // show the currencies activity
+                Intent intent = new Intent(getActivity(), CurrencyListActivity.class);
+                intent.setAction(Intent.ACTION_PICK);
+                startActivityForResult(intent, REQUEST_PICK_CURRENCY);
+
+                return true;
+            }
+        };
+
+        baseCurrency.setOnPreferenceClickListener(clickListener);
+    }
+
+    private String getDateFormatFromMask(String mask) {
+        if (!TextUtils.isEmpty(mask)) {
+            for (int i = 0; i < getResources().getStringArray(R.array.date_format_mask).length; i++) {
+                if (mask.equals(getResources().getStringArray(R.array.date_format_mask)[i])) {
+                    return getResources().getStringArray(R.array.date_format)[i];
+                }
+            }
+        }
+        return null;
+    }
+
+    private void initDefaultAccount() {
+        ListPreference preference = (ListPreference) findPreference(getString(R.string.pref_default_account));
+        if (preference == null) return;
+
+        AccountService accountService = new AccountService(getActivity());
+        List<Account> accounts = accountService.getAccountList(false, false);
+
+        // the list is already sorted by name.
+
+        final String[] entries = new String[accounts.size() + 1];
+        String[] entryValues = new String[accounts.size() + 1];
+        // Add the null value so that the setting can be disabled.
+        entries[0] = getString(R.string.none);
+        entryValues[0] = "-1";
+        // list of currencies
+        for (int i = 1; i < accounts.size() + 1; i++) {
+            entries[i] = accounts.get(i-1).getName();
+            entryValues[i] = accounts.get(i-1).getId().toString();
+        }
+        // set value
+        preference.setEntries(entries);
+        preference.setEntryValues(entryValues);
+
+        final AccountRepository repository = new AccountRepository(getActivity());
+
+        // set account name as the value here
+        Integer defaultAccountId = new GeneralSettings(getActivity()).getDefaultAccountId();
+        String accountName = entries[0]; // none
+        if (defaultAccountId != null && defaultAccountId != Constants.NOT_SET) {
+            accountName = repository.loadName(defaultAccountId);
+        }
+        preference.setSummary(accountName);
+
+        preference.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+            @Override
+            public boolean onPreferenceChange(Preference preference, Object newValue) {
+                String accountName = entries[0];
+                int accountId = Integer.parseInt(newValue.toString());
+                if (accountId != Constants.NOT_SET) {
+                    accountName = repository.loadName(accountId);
+                }
+                preference.setSummary(accountName);
+
+                new GeneralSettings(getActivity()).setDefaultAccountId(accountId);
+
+                return true;
+            }
+        });
+    }
+
+    private void showCurrentDefaultCurrency() {
+        Preference baseCurrency = findPreference(getString(PreferenceConstants.PREF_BASE_CURRENCY));
+        if (baseCurrency == null) return;
+
+        CurrencyService currencyService = new CurrencyService(getActivity().getApplicationContext());
+        Integer currencyId = currencyService.getBaseCurrencyId();
+
+        Currency tableCurrency = currencyService.getCurrency(currencyId);
+        if (tableCurrency != null) {
+            baseCurrency.setSummary(tableCurrency.getName());
+        }
+    }
+
+    private void showCurrencyChangeNotification() {
+        new MaterialDialog.Builder(getActivity())
+                .title(R.string.base_currency_changed)
+                .content(R.string.base_currency_change_notification)
+                .positiveText(android.R.string.ok)
+                .neutralText(R.string.open_currencies)
+                .onNeutral(new MaterialDialog.SingleButtonCallback() {
+                    @Override
+                    public void onClick(MaterialDialog dialog, DialogAction which) {
+                        Intent intent = new Intent(getActivity(), CurrencyListActivity.class);
+                        intent.setAction(Intent.ACTION_EDIT);
+                        startActivity(intent);
+                    }
+                })
+                .show();
+    }
+
+}

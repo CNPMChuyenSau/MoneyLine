@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<!--
+    Big tablet, 10"
+-->
+<resources>
+    <!-- Preference activity side margins -->
+    <!--<dimen name="mmx_activity_side_margin">0dp</dimen>-->
+    <dimen name="mmx_activity_side_padding">32dp</dimen>
+</resources>

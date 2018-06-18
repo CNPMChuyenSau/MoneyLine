@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <!-- theme used for decor view (the initial screen simulating a splash screen) -->
+    <!-- It is assigned to the application in the manifest, application block. -->
+    <style name="Theme.Splash" parent="android:Theme">
+        <item name="android:windowBackground">@drawable/background_logo</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+</resources>

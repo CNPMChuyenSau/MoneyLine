@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.vanluom.group11.quanlytaichinhcanhan" >
+
+    <application
+        android:name=".MoneyManagerApplication"
+        android:allowBackup="true"
+        android:backupAgent=".core.MoneyManagerBackupAgentHelper"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/application_name"
+        android:theme="@style/Theme.Splash" >
+
+        <!--<activity-->
+            <!--android:name="com.dropbox.client2.android.AuthActivity"-->
+            <!--android:configChanges="orientation|keyboard|screenSize"-->
+            <!--android:launchMode="singleTask" >-->
+            <!--<intent-filter>-->
+                <!--&lt;!&ndash; Change this to be db- followed by your app key &ndash;&gt;-->
+                <!--<data android:scheme="db-276plbbbd1y5c38" />-->
+
+                <!--<action android:name="android.intent.action.VIEW" />-->
+
+                <!--<category android:name="android.intent.category.BROWSABLE" />-->
+                <!--<category android:name="android.intent.category.DEFAULT" />-->
+            <!--</intent-filter>-->
+        <!--</activity>-->
+
+    </application>
+
+</manifest>

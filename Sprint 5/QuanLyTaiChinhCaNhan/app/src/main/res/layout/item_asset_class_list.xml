@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:paddingLeft="@dimen/mmx_padding"
+    android:paddingStart="@dimen/mmx_padding"
+    android:paddingEnd="@dimen/mmx_padding"
+    android:paddingRight="@dimen/mmx_padding"
+    android:layout_height="@dimen/mmx_list_item_height"
+    android:gravity="center_vertical">
+
+    <com.vanluom.group11.quanlytaichinhcanhan.view.RobotoTextViewFontIcon
+        android:id="@+id/nameView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

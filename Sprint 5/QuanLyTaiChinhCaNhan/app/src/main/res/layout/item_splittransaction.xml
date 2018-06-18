@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!-- graphical Transaction Type selector -->
+        <com.shamanland.fonticon.FontIconView
+            android:id="@+id/transactionTypeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            style="@style/Money.Button.Transparent"
+            android:text="@string/ic_diff_added"
+            android:textSize="@dimen/md_icon_max_size"
+            android:textColor="@color/material_green_700" />
+
+        <TableLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:stretchColumns="2">
+
+            <!-- category -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.vanluom.group11.quanlytaichinhcanhan.view.RobotoTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|end"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:text="@string/category" />
+
+                <com.vanluom.group11.quanlytaichinhcanhan.view.RobotoTextView
+                    android:id="@+id/textViewCategory"
+                    style="?attr/holoSpinnerStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:hint="@string/select_category"
+                    android:singleLine="true" />
+            </TableRow>
+
+            <!-- Amount -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.vanluom.group11.quanlytaichinhcanhan.view.RobotoTextView
+                    android:layout_width="32dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|end"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:text="@string/amount" />
+
+                <com.vanluom.group11.quanlytaichinhcanhan.view.RobotoTextView
+                    android:id="@+id/editTextTotAmount"
+                    style="?attr/holoSpinnerStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:hint="@string/amount"
+                    android:textStyle="bold"
+                    android:gravity="end" />
+            </TableRow>
+        </TableLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider" />
+
+</LinearLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0"
+    encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:background="@drawable/selector_listview_one"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:text="Tên mục chi"
+        android:layout_width="fill_parent"
+        android:layout_height="25dp"
+        android:id="@+id/textViewTen"
+        android:layout_weight="1.0"
+        style="@style/FormEditValue"/>
+
+    <TextView android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:id="@+id/txtGhi"
+        android:layout_width="fill_parent"
+        android:layout_height="25.0dip"
+        android:text="ghi chú"
+        android:textSize="13dp"
+        android:textColor="#d48e7f7f"
+        android:layout_marginLeft="10.0dip"
+        android:layout_weight="1.0"
+        style="@style/GroupExpandValue"
+        />
+
+</LinearLayout>

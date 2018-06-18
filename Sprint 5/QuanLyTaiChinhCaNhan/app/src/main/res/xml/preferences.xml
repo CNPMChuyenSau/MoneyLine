@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference
+        android:icon="@null"
+        android:key="@string/pref_general"
+        android:title="@string/preferences_general" />
+    <Preference
+        android:icon="@null"
+        android:key="@string/pref_per_database"
+        android:title="@string/preferences_perdatabase" />
+    <Preference
+        android:icon="@null"
+        android:key="@string/pref_look_feel"
+        android:title="@string/preferences_dispaly" />
+    <Preference
+        android:icon="@null"
+        android:key="@string/pref_behaviour"
+        android:title="@string/preferences_behaviour" />
+    <Preference
+        android:icon="@null"
+        android:key="@string/pref_synchronization"
+        android:title="@string/synchronization" />
+    <Preference
+        android:icon="@null"
+        android:key="pref_investment"
+        android:title="@string/investment" />
+    <Preference
+        android:icon="@null"
+        android:key="@string/pref_budget"
+        android:title="@string/budget" />
+    <Preference
+        android:icon="@null"
+        android:key="@string/pref_security"
+        android:title="@string/preferences_security" />
+    <Preference
+        android:icon="@null"
+        android:key="@string/pref_database"
+        android:title="@string/database" />
+    <Preference
+        android:icon="@null"
+        android:key="@string/pref_version_name"
+        android:title="@string/preferences_info_application" />
+</PreferenceScreen>
