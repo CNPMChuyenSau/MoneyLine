@@ -1,0 +1,158 @@
+<?xml version="1.0"
+    encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:background="@color/background_from"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout android:orientation="horizontal"
+                android:id="@+id/lnHead"
+                android:background="@color/background_register_login"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false">
+                <ImageView android:id="@+id/button_back"
+                    android:background="@drawable/selector_button_back"
+                    android:padding="10.0dip"
+                    android:clickable="false"
+                    android:layout_width="50.0dip"
+                    android:layout_height="50.0dip"
+                    android:src="@drawable/back_button"
+                    android:contentDescription="@string/no_image"
+                    />
+                <TextView android:gravity="center"
+                    android:layout_gravity="center"
+                    android:id="@+id/txtLanguage"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10.0dip"
+                    android:text="@string/Language"
+                    android:layout_weight="1.0"
+                    style="@style/TextHeader"
+                    />
+                <Button android:textColor="@color/white"
+                    android:layout_gravity="center"
+                    android:id="@+id/button_save"
+                    android:background="@drawable/selector_button_save_gray"
+                    android:layout_width="50.0dip"
+                    android:layout_height="30.0dip"
+                    android:layout_marginRight="10.0dip"
+                    android:text="@string/Save"
+                    style="@style/TextHeaderAction"
+                    android:layout_weight="0.08" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal"
+                android:id="@+id/lnSelectLanguage"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/custom_edit_money"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginRight="10.0dip">
+                <TextView android:gravity="center"
+                    android:id="@+id/text_view_edit_money"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:layout_margin="5.0dip"
+                    android:text="@string/present_language"
+                    android:singleLine="true"
+                    android:layout_weight="1.0"
+                    style="@style/input_money_keyboard"
+                    android:layout_marginBottom="20dip" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_list_view_one"
+                android:layout_marginTop="20dp"
+                android:id="@+id/lnSelectLanguage1">
+
+                <TextView android:gravity="center_vertical"
+                    android:id="@+id/txtLanguage"
+                    android:layout_width="0.0dip"
+                    android:text="Tiếng Việt"
+                    android:layout_height="50.0dip"
+                    android:layout_marginLeft="10.0dip"
+                    android:layout_weight="1.0"
+                    style="@style/group_expand_value"
+                    />
+
+                <ImageView android:id="@+id/imageViewchecked1"
+                    android:layout_width="32.0dip"
+                    android:layout_height="32.0dip"
+                    android:src="@drawable/check_enable"
+                    android:contentDescription="@string/no_image"
+                    />
+
+            </LinearLayout>
+            <View android:background="@color/Line"
+                android:layout_width="fill_parent"
+                android:layout_height="5.0dip"
+                />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_list_view_one"
+                android:id="@+id/lnSelectLanguage2">
+
+                <TextView
+                    style="@style/group_expand_value"
+                    android:gravity="center_vertical"
+                    android:id="@+id/textView3"
+                    android:text="English"
+
+                    android:layout_width="0.0dip"
+                    android:layout_height="50.0dip"
+                    android:layout_marginLeft="10.0dip"
+                    android:layout_weight="1.0" />
+
+                <ImageView
+                    android:id="@+id/imageViewchecked2"
+                    android:layout_width="32.0dip"
+                    android:layout_height="32.0dip"
+                    android:src="@drawable/check_enable"
+                    android:contentDescription="@string/no_image" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical"
+                android:background="@drawable/custom_edit_money"
+                android:padding="2.0dip"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10.0dip">
+             </LinearLayout>
+            <LinearLayout android:gravity="center"
+                android:id="@+id/lnSave"
+                android:background="@drawable/selector_button_green"
+                android:layout_width="fill_parent"
+                android:layout_height="40.0dip"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginTop="30.0dip"
+                android:layout_marginRight="10.0dip"
+                android:layout_marginBottom="20.0dip">
+                <ImageView android:layout_width="25.0dip"
+                    android:layout_height="20.0dip"
+                    android:src="@drawable/save_icon_button"
+                    android:contentDescription="@string/no_image"
+                    />
+                <TextView android:gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/save_language"
+                    style="@style/text_view_style"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+
+

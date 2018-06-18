@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/lnHead"
+        android:background="@color/background_register_login"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:baselineAligned="false">
+
+        <TextView
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:id="@+id/title_type_account"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/type_account"
+            android:layout_weight="1.0"
+            style="@style/TextHeader" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_list_view_one"
+        android:layout_marginTop="4dp"
+        android:id="@+id/linear_layout_type_wallet_account">
+
+        <ImageView
+            android:layout_width="50.0dip"
+            android:layout_height="50.0dip"
+            android:layout_marginStart="15dp"
+            android:src="@drawable/account_wallet"
+            android:contentDescription="@string/ContentDescriptionImageNull"
+            android:id="@+id/image_view_wallet_account"/>
+
+        <TextView
+            android:gravity="center_vertical"
+            android:id="@+id/text_view_wallet_account"
+            android:layout_width="0.0dip"
+            android:text="@string/balance"
+            android:layout_height="50.0dip"
+            android:layout_marginStart="10.0dip"
+            android:layout_weight="1.0"
+            style="@style/group_expand_value"
+            />
+
+        <ImageView
+            android:id="@+id/image_view_checked_wallet"
+            android:layout_width="32.0dip"
+            android:layout_height="32.0dip"
+            android:layout_marginEnd="15dp"
+            android:src="@drawable/check_enable"
+            android:contentDescription="@string/no_image" />
+
+    </LinearLayout>
+
+    <View
+        android:background="@color/Line"
+        android:layout_width="match_parent"
+        android:layout_height="1.0dip" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_list_view_one"
+        android:id="@+id/linear_layout_type_atm_account">
+
+        <ImageView
+            android:layout_width="50.0dip"
+            android:layout_height="50.0dip"
+            android:layout_marginStart="15dp"
+            android:src="@drawable/account_bank"
+            android:contentDescription="@string/ContentDescriptionImageNull"
+            android:id="@+id/image_view_atm_account"
+            android:layout_weight="0.01" />
+
+        <TextView
+            style="@style/group_expand_value"
+            android:gravity="center_vertical"
+            android:id="@+id/text_view_ticked_atm_account"
+            android:text="@string/account_atm"
+
+            android:layout_width="0.0dip"
+            android:layout_height="50.0dip"
+            android:layout_marginStart="10.0dip"
+            android:layout_weight="1.0" />
+
+        <ImageView
+            android:id="@+id/image_view_checked_atm_account"
+            android:layout_width="32.0dip"
+            android:layout_height="32.0dip"
+            android:layout_marginEnd="15dp"
+            android:src="@drawable/check_enable"
+            android:contentDescription="@string/no_image" />
+    </LinearLayout>
+
+    <View
+        android:background="@color/Line"
+        android:layout_width="match_parent"
+        android:layout_height="1.0dip" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_list_view_one"
+        android:id="@+id/linear_layout_type_bank_account">
+
+        <ImageView
+            android:layout_width="50.0dip"
+            android:layout_height="50.0dip"
+            android:layout_marginStart="15dp"
+            android:src="@drawable/account_master"
+            android:contentDescription="@string/ContentDescriptionImageNull"
+            android:id="@+id/image_view_bank_account"
+            android:layout_weight="0.01" />
+
+        <TextView
+            style="@style/group_expand_value"
+            android:gravity="center_vertical"
+            android:id="@+id/text_view_ticked_bank_account"
+            android:text="@string/bank_account"
+
+            android:layout_width="0.0dip"
+            android:layout_height="50.0dip"
+            android:layout_marginStart="10.0dip"
+            android:layout_weight="1.0" />
+
+        <ImageView
+            android:id="@+id/image_view_checked_bank_account"
+            android:layout_width="32.0dip"
+            android:layout_height="32.0dip"
+            android:layout_marginEnd="15dp"
+            android:src="@drawable/check_enable"
+            android:contentDescription="@string/no_image" />
+    </LinearLayout>
+
+    <View
+        android:background="@color/Line"
+        android:layout_width="match_parent"
+        android:layout_height="1.0dip" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_list_view_one"
+        android:id="@+id/linear_layout_type_account_so_tiet_kiem">
+
+        <ImageView
+            android:layout_width="50.0dip"
+            android:layout_height="50.0dip"
+            android:layout_marginStart="15dp"
+            android:src="@drawable/account_pig"
+            android:contentDescription="@string/ContentDescriptionImageNull"
+            android:id="@+id/image_view_account_so_tiet_kiem"
+            android:layout_weight="0.01" />
+
+        <TextView
+            style="@style/group_expand_value"
+            android:gravity="center_vertical"
+            android:id="@+id/ticked_account_so_tiet_kiem"
+            android:text="@string/AccountTypeTicker4"
+
+            android:layout_width="0.0dip"
+            android:layout_height="50.0dip"
+            android:layout_marginStart="10.0dip"
+            android:layout_weight="1.0" />
+
+        <ImageView
+            android:id="@+id/image_view_checked_so_tiet_kiem"
+            android:layout_width="32.0dip"
+            android:layout_height="32.0dip"
+            android:layout_marginEnd="15dp"
+            android:src="@drawable/check_enable"
+            android:contentDescription="@string/no_image" />
+    </LinearLayout>
+
+    <View
+        android:background="@color/Line"
+        android:layout_width="match_parent"
+        android:layout_height="1.0dip" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_list_view_one"
+        android:id="@+id/linear_layout_type_account_other">
+
+        <ImageView
+            android:layout_width="50.0dip"
+            android:layout_height="50.0dip"
+            android:layout_marginStart="15dp"
+            android:src="@drawable/account_other"
+            android:contentDescription="@string/ContentDescriptionImageNull"
+            android:id="@+id/image_view_account_other"
+            android:layout_weight="0.01" />
+
+        <TextView
+            style="@style/group_expand_value"
+            android:gravity="center_vertical"
+            android:id="@+id/ticked_account_other"
+            android:text="@string/AccountTypeTicker5"
+
+            android:layout_width="0.0dip"
+            android:layout_height="50.0dip"
+            android:layout_marginStart="10.0dip"
+            android:layout_weight="1.0" />
+
+        <ImageView
+            android:id="@+id/image_view_checked_account_other"
+            android:layout_width="32.0dip"
+            android:layout_height="32.0dip"
+            android:layout_marginEnd="15dp"
+            android:src="@drawable/check_enable"
+            android:contentDescription="@string/no_image" />
+    </LinearLayout>
+
+</LinearLayout>

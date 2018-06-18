@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout android:orientation="horizontal"
+        android:id="@+id/lnHead"
+        android:background="@color/background_register_login"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false">
+        <ImageView android:id="@+id/button_back"
+            android:background="@drawable/selector_button_back"
+            android:padding="10.0dip"
+            android:clickable="false"
+            android:layout_width="50.0dip"
+            android:layout_height="50.0dip"
+            android:src="@drawable/back_button"
+            android:contentDescription="@string/no_image"
+            />
+        <LinearLayout
+            android:gravity="center"
+            android:padding="12dp"
+            android:orientation="horizontal"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="40dp">
+
+            <TextView
+                android:text="@string/categories"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:id="@+id/textView6"
+                android:gravity="center"
+                />
+
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinnerCategory"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="center"
+            android:id="@+id/linearLayout2"
+            android:background="@drawable/selector_button_add"
+            android:clickable="true"
+            android:layout_width="50.0dip"
+            android:layout_height="50.0dip"
+            android:minWidth="50.0dip" >
+
+            <ImageView
+                android:id="@+id/image_view_add"
+                android:layout_width="50.0dip"
+                android:layout_height="50.0dip"
+                android:src="@drawable/add"
+                android:contentDescription="@string/no_image" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+android:layout_marginBottom="5dp"
+    android:layout_weight="1">
+    <ListView
+        android:layout_width="fill_parent"
+        android:layout_weight="1"
+        android:id="@+id/listviewAddcategoryS"
+        android:layout_height="match_parent" />
+</LinearLayout>
+
+
+        <RelativeLayout
+
+            android:background="@color/white"
+            android:gravity="bottom"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="189dp">
+            <View android:background="@color/Line"
+                android:layout_width="fill_parent"
+                android:layout_height="2.0dip"
+                android:layout_marginLeft="1.0dip"
+                android:layout_marginRight="1.0dip"
+                android:id="@+id/view" />
+            <ScrollView android:layout_width="fill_parent"
+                android:layout_height="189dp">
+                <LinearLayout android:orientation="vertical"
+                    android:background="@color/white"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/LloMainCategoryAdd">
+                    <LinearLayout android:orientation="vertical"
+                        android:background="@drawable/custom_edit_money"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10.0dip"
+                        android:layout_marginRight="10.0dip">
+                        <LinearLayout android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:layout_width="fill_parent"
+                            android:layout_height="44dp">
+                            <TextView android:gravity="center"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10.0dip"
+                                android:text="@string/Name"
+                                style="@style/form_edit_title"
+                                />
+                            <EditText android:gravity="center|right"
+                                android:id="@+id/txtCategoryName"
+                                android:background="@color/white"
+                                android:layout_width="0.0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5.0dip"
+                                android:layout_marginTop="5.0dip"
+                                android:layout_marginRight="5.0dip"
+                                android:layout_marginBottom="5.0dip"
+                                android:minHeight="44.0dip"
+                                android:hint="@string/CategoriesExpensesName"
+                                android:layout_weight="1.0"
+                                android:inputType="textCapSentences"
+                                style="@style/form_edit_value">
+                                <requestFocus />
+                            </EditText>
+                            <ImageView android:id="@+id/image_view_delete_event"
+                                android:background="@drawable/clear_edit"
+                                android:visibility="gone"
+                                android:layout_width="26.0dip"
+                                android:layout_height="26.0dip"
+                                android:layout_marginRight="5.0dip"
+                                android:contentDescription="@string/no_image"
+                                />
+                        </LinearLayout>
+                        <View android:id="@+id/expenseCategoryLine"
+                            android:background="@color/Line"
+                            android:layout_width="fill_parent"
+                            android:layout_height="1.0dip"
+                            />
+                        <LinearLayout android:gravity="center"
+                            android:layout_gravity="center"
+                            android:orientation="horizontal"
+                            android:id="@+id/lnCatagoryExpensesParent"
+                            android:background="@drawable/selector_list_view_one"
+                            android:clickable="true"
+                            android:layout_width="fill_parent"
+                            android:layout_height="44dp"
+
+                            android:layout_marginLeft="2.0dip"
+                            android:layout_marginRight="2.0dip"
+                            android:layout_marginBottom="1.0dip">
+                            <ImageView
+                                android:background="@color/background_color"
+                                android:id="@+id/imageViewAddSub"
+                                android:layout_width="50.0dip"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/add"
+                                android:contentDescription="@string/no_image" />
+                            <TextView android:clickable="false"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="16dp"
+                                android:layout_marginLeft="10.0dip"
+                                android:text="@string/CatagoryExpensesParent"
+                                style="@style/form_edit_title"
+                                />
+
+                            <TextView android:gravity="center|right"
+                                android:id="@+id/txtCatagoryExpensesParent"
+                                android:clickable="false"
+                                android:layout_width="0.0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5.0dip"
+                                android:layout_marginTop="5.0dip"
+                                android:layout_marginBottom="5.0dip"
+                                android:minHeight="44.0dip"
+                                android:layout_weight="1.0"
+                                style="@style/form_edit_value"
+
+                                />
+
+                            <ImageView android:layout_gravity="center_vertical"
+                                android:clickable="false"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="5.0dip"
+                                android:src="@drawable/disclosure"
+                                android:contentDescription="@string/no_image"
+                                />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:background="@drawable/custom_edit_money"
+                        android:layout_width="fill_parent"
+                        android:layout_height="44dp"
+                        android:layout_marginLeft="10.0dip"
+                        android:layout_marginTop="1.0dip"
+                        android:layout_marginRight="10.0dip"
+                        android:minHeight="50.0dip">
+                        <TextView android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10.0dip"
+                            android:text="@string/Description"
+                            style="@style/TextViewStyleBlack"
+                            />
+                        <EditText android:gravity="center|right"
+                            android:id="@+id/txtDescription"
+                            android:background="@color/white"
+                            android:layout_width="0.0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5.0dip"
+                            android:layout_marginRight="15.0dip"
+                            android:layout_marginBottom="5.0dip"
+                            android:minHeight="44.0dip"
+                            android:layout_weight="1.0"
+                            android:inputType="textCapSentences|textMultiLine"
+                            style="@style/form_edit_value"
+                            />
+                    </LinearLayout>
+                    <LinearLayout android:orientation="horizontal"
+                        android:layout_width="fill_parent"
+                        android:layout_height="44dp"
+                        android:baselineAligned="false">
+
+                        <LinearLayout android:gravity="center"
+                            android:id="@+id/btnSaveBottom"
+                            android:background="@drawable/selector_button_green"
+                            android:layout_width="0.0dip"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="10.0dip"
+                            android:layout_marginTop="8.0dip"
+                            android:layout_marginRight="10.0dip"
+                            android:layout_marginBottom="20.0dip"
+                            android:layout_weight="0.95">
+                            <ImageView android:layout_width="25.0dip"
+                                android:layout_height="20.0dip"
+                                android:src="@drawable/save_icon_button"
+                                android:contentDescription="@string/no_image"
+                                />
+                            <TextView android:gravity="center_vertical"
+                                android:layout_width="wrap_content"
+                                android:layout_height="44dp"
+                                android:text="@string/Save"
+                                style="@style/text_view_style"
+                                />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+
+            <FrameLayout
+                android:id="@+id/FragmentContentAdd"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_alignStart="@+id/view">
+            </FrameLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

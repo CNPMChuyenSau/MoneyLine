@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@color/mainBackground"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreateAccountActivity">
+
+    <LinearLayout
+        android:gravity="center"
+        android:layout_marginTop="40dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:src="@drawable/app_icon"
+            android:layout_marginBottom="20dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp" />
+        <TextView
+            android:text="CREATE ACCOUNT"
+
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/edt_username_accreateacc"
+            android:layout_marginBottom="10dp"
+            android:hint="@string/username"
+            android:inputType="textEmailAddress"
+            android:layout_width="240dp"
+            android:layout_height="40dp" />
+        <EditText
+            android:id="@+id/edt_phone_accreateacc"
+            android:hint="Phone number"
+            android:inputType="phone"
+            android:layout_width="240dp"
+            android:layout_height="40dp" />
+        <EditText
+            android:id="@+id/edt_pass_accreateacc"
+            android:layout_marginBottom="10dp"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:layout_width="240dp"
+            android:layout_height="40dp" />
+
+        <EditText
+            android:id="@+id/edt_confirm_accreateacc"
+            android:hint="@string/confirmpass"
+            android:inputType="textPassword"
+            android:layout_width="240dp"
+            android:layout_height="40dp" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_marginBottom="100dp"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+
+        android:gravity="bottom"
+        android:layout_width="240dp"
+        android:layout_height="match_parent">
+
+        <Button
+
+            android:id="@+id/btn_cancel_accreateacc"
+            android:background="@color/btnlogin"
+            android:layout_weight="1"
+            android:text="Cancel"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:layout_marginRight="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="35dp" />
+        <Button
+
+            android:id="@+id/btn_next_accreateacc"
+            android:background="@color/btnlogin"
+            android:layout_weight="1"
+            android:text="Next"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:textSize="15sp"
+            android:layout_marginLeft="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="35dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

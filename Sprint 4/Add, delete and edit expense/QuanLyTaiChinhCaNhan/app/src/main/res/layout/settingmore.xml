@@ -1,0 +1,426 @@
+<?xml version="1.0"
+    encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical"
+    android:background="@color/background_from"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/LinearLayoutMainSettingMore">
+
+        <LinearLayout android:gravity="center"
+            android:orientation="horizontal"
+            android:background="@color/BarHeader"
+            android:layout_width="fill_parent"
+            android:layout_height="50.0dip">
+            <LinearLayout android:gravity="center"
+                android:id="@+id/button_back"
+                android:background="@drawable/selector_button_back"
+                android:paddingRight="5.0dip"
+                android:clickable="true"
+                android:layout_width="wrap_content"
+                android:layout_height="50.0dip"
+                android:baselineAligned="false">
+                <ImageView android:background="@drawable/selector_button_back"
+                    android:padding="10.0dip"
+                    android:layout_width="50.0dip"
+                    android:layout_height="50.0dip"
+                    android:src="@drawable/back_button"
+                    android:contentDescription="@string/ContentDescriptionImageNull"
+                    />
+            </LinearLayout>
+            <TextView android:gravity="center"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:text="@string/SettingMoreTitle"
+                android:layout_weight="1.0"
+                style="@style/TextHeader"
+                />
+            <LinearLayout android:gravity="center"
+                android:orientation="horizontal"
+                android:id="@+id/lnPersonAccount"
+                android:background="@drawable/selector_button_back"
+                android:paddingLeft="5.0dip"
+                android:paddingRight="10.0dip"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent">
+                <ImageView android:id="@+id/imgUserMenu"
+                    android:background="@drawable/person_icon_new"
+                    android:layout_width="30.0dip"
+                    android:layout_height="30.0dip"
+                    android:contentDescription="@string/ContentDescriptionImageNull"
+                    />
+                <ImageView android:background="@drawable/drop"
+                    android:layout_width="10.0dip"
+                    android:layout_height="10.0dip"
+                    android:layout_marginLeft="5.0dip"
+                    android:contentDescription="@string/ContentDescriptionImageNull"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+        <ScrollView android:scrollbars="none"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical"
+                android:background="@color/white"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+                <TextView android:textColor="@color/incomeColor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15.0dip"
+                    android:layout_marginTop="20.0dip"
+                    android:text="@string/SettingGroupData"
+                    style="@style/ReportBold"
+                    />
+                <LinearLayout android:orientation="horizontal"
+                    android:id="@+id/lnSync"
+                    android:background="@drawable/selector_list_view_one"
+                    android:clickable="true"
+                    android:layout_width="fill_parent"
+                    android:layout_height="70.0dip">
+                    <ImageView android:layout_gravity="center"
+                        android:layout_width="35.0dip"
+                        android:layout_height="35.0dip"
+                        android:layout_marginLeft="15.0dip"
+                        android:src="@drawable/sync_blue"
+                        android:contentDescription="@string/no_image"
+                        />
+                    <TextView android:textColor="@color/SettingTextColor"
+                        android:layout_gravity="center"
+                        android:paddingLeft="25.0dip"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Syncs"
+                        android:layout_weight="1.0"
+                        style="@style/TextViewStyleBlack"
+                        />
+                    <TextView android:textSize="14.0sp"
+                        android:textColor="@color/white"
+                        android:gravity="center"
+                        android:layout_gravity="center_vertical"
+                        android:id="@+id/txttotalQueue"
+                        android:background="@drawable/total_queue"
+                        android:visibility="gone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10.0dip"
+                        android:minWidth="20.0dip"
+                        android:minHeight="20.0dip"
+                        />
+                </LinearLayout>
+                <View android:background="@color/LineGrey"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dip"
+                    />
+
+                <LinearLayout android:orientation="horizontal"
+                    android:id="@+id/lnGetAllData"
+                    android:background="@drawable/selector_list_view_one"
+                    android:clickable="true"
+                    android:layout_width="fill_parent"
+                    android:layout_height="70.0dip">
+                    <ImageView android:layout_gravity="center"
+                        android:layout_width="35.0dip"
+                        android:layout_height="35.0dip"
+                        android:layout_marginLeft="15.0dip"
+                        android:src="@drawable/get_all_data"
+                        android:contentDescription="@string/no_image"
+                        />
+                    <TextView android:textColor="@color/SettingTextColor"
+                        android:layout_gravity="center"
+                        android:paddingLeft="25.0dip"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:text="@string/SettingGetAllServerData"
+                        android:layout_weight="1.0"
+                        style="@style/TextViewStyleBlack"
+                        />
+                </LinearLayout>
+
+                <LinearLayout android:orientation="horizontal"
+                    android:id="@+id/lnResetData"
+                    android:background="@drawable/selector_list_view_one"
+                    android:clickable="true"
+                    android:layout_width="fill_parent"
+                    android:layout_height="70.0dip">
+                    <ImageView android:layout_gravity="center"
+                        android:layout_width="35.0dip"
+                        android:layout_height="35.0dip"
+                        android:layout_marginLeft="15.0dip"
+                        android:src="@drawable/ic_reset_data_new"
+                        android:contentDescription="@string/no_image"
+                        />
+                    <TextView android:textColor="@color/SettingTextColor"
+                        android:layout_gravity="center"
+                        android:paddingLeft="25.0dip"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ResetData"
+                        android:layout_weight="1.0"
+                        style="@style/TextViewStyleBlack"
+                        />
+                </LinearLayout>
+
+                <View android:background="@color/LineGrey"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dip"
+                    />
+
+                <View android:background="@drawable/setting_line"
+                    android:layout_width="fill_parent"
+                    android:layout_height="8.0dip"
+                    />
+                <TextView android:textColor="@color/incomeColor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15.0dip"
+                    android:layout_marginTop="20.0dip"
+                    android:text="@string/setting_group_setup"
+                    style="@style/ReportBold"
+                    />
+                <LinearLayout android:orientation="horizontal"
+                    android:id="@+id/lnLanguage"
+                    android:background="@drawable/selector_list_view_one"
+                    android:clickable="true"
+                    android:layout_width="fill_parent"
+                    android:layout_height="70.0dip">
+                    <ImageView android:layout_gravity="center"
+                        android:layout_width="35.0dip"
+                        android:layout_height="35.0dip"
+                        android:layout_marginLeft="15.0dip"
+                        android:src="@drawable/ic_language_new"
+                        android:contentDescription="@string/no_image"
+                        />
+                    <TextView android:textColor="@color/SettingTextColor"
+                        android:layout_gravity="center"
+                        android:paddingLeft="25.0dip"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Language"
+                        android:layout_weight="1.0"
+                        style="@style/TextViewStyleBlack"
+                        />
+                </LinearLayout>
+                <View android:background="@color/LineGrey"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dip"
+                    />
+                <LinearLayout android:orientation="horizontal"
+                    android:id="@+id/lnPassCode"
+                    android:background="@drawable/selector_list_view_one"
+                    android:clickable="true"
+                    android:layout_width="fill_parent"
+                    android:layout_height="70.0dip">
+                    <ImageView android:layout_gravity="center"
+                        android:layout_width="35.0dip"
+                        android:layout_height="35.0dip"
+                        android:layout_marginLeft="15.0dip"
+                        android:src="@drawable/ic_passcode_new"
+                        android:contentDescription="@string/no_image"
+                        />
+                    <TextView android:textColor="@color/SettingTextColor"
+                        android:layout_gravity="center"
+                        android:paddingLeft="25.0dip"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:text="@string/pass_code"
+                        android:layout_weight="1.0"
+                        style="@style/TextViewStyleBlack"
+                        />
+                </LinearLayout>
+                <View android:background="@color/LineGrey"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dip"
+                    />
+                <LinearLayout android:orientation="horizontal"
+                    android:id="@+id/lnReminder"
+                    android:background="@drawable/selector_list_view_one"
+                    android:clickable="true"
+                    android:layout_width="fill_parent"
+                    android:layout_height="70.0dip">
+                    <ImageView android:layout_gravity="center"
+                        android:layout_width="35.0dip"
+                        android:layout_height="35.0dip"
+                        android:layout_marginLeft="15.0dip"
+                        android:src="@drawable/ic_alarm_new"
+                        android:contentDescription="@string/no_image"
+                        />
+                    <TextView android:textColor="@color/SettingTextColor"
+                        android:layout_gravity="center"
+                        android:paddingLeft="25.0dip"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:text="@string/reminder_input"
+                        android:layout_weight="1.0"
+                        style="@style/TextViewStyleBlack"
+                        />
+                </LinearLayout>
+                <View android:background="@color/LineGrey"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dip"
+                    />
+
+                <View android:background="@color/LineGrey"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dip"
+                    />
+
+                <View android:background="@color/LineGrey"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dip"
+                    />
+                <LinearLayout android:orientation="horizontal"
+                    android:id="@+id/lnSendError"
+                    android:background="@drawable/selector_list_view_one"
+                    android:clickable="true"
+                    android:layout_width="fill_parent"
+                    android:layout_height="70.0dip">
+                    <ImageView android:layout_gravity="center"
+                        android:layout_width="35.0dip"
+                        android:layout_height="35.0dip"
+                        android:layout_marginLeft="15.0dip"
+                        android:src="@drawable/ic_send_error_new"
+                        android:contentDescription="@string/no_image"
+                        />
+                    <TextView android:textColor="@color/SettingTextColor"
+                        android:layout_gravity="center"
+                        android:paddingLeft="25.0dip"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:text="@string/settingMenuSendError"
+                        android:layout_weight="1.0"
+                        style="@style/TextViewStyleBlack"
+                        />
+                </LinearLayout>
+                <View android:background="@drawable/setting_line"
+                    android:layout_width="fill_parent"
+                    android:layout_height="8.0dip"
+                    />
+                <TextView android:textColor="@color/incomeColor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15.0dip"
+                    android:layout_marginTop="20.0dip"
+                    android:text="@string/help"
+                    style="@style/ReportBold"
+                    />
+                <LinearLayout android:orientation="horizontal"
+                    android:id="@+id/lnNotification"
+                    android:background="@drawable/selector_list_view_one"
+                    android:clickable="true"
+                    android:layout_width="fill_parent"
+                    android:layout_height="70.0dip">
+                    <ImageView android:layout_gravity="center"
+                        android:layout_width="35.0dip"
+                        android:layout_height="35.0dip"
+                        android:layout_marginLeft="15.0dip"
+                        android:src="@drawable/ic_notification_new"
+                        android:contentDescription="@string/no_image"
+                        />
+                    <TextView android:textColor="@color/SettingTextColor"
+                        android:layout_gravity="center"
+                        android:paddingLeft="25.0dip"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:text="@string/notification"
+                        android:layout_weight="1.0"
+                        style="@style/TextViewStyleBlack"
+                        />
+
+                </LinearLayout>
+                <View android:background="@color/LineGrey"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dip"
+                    />
+                <LinearLayout android:orientation="horizontal"
+                    android:id="@+id/lnRate"
+                    android:background="@drawable/selector_list_view_one"
+                    android:clickable="true"
+                    android:layout_width="fill_parent"
+                    android:layout_height="70.0dip">
+                    <ImageView android:layout_gravity="center"
+                        android:layout_width="35.0dip"
+                        android:layout_height="35.0dip"
+                        android:layout_marginLeft="15.0dip"
+                        android:src="@drawable/ic_rate_new"
+                        android:contentDescription="@string/no_image"
+                        />
+                    <TextView android:textColor="@color/SettingTextColor"
+                        android:layout_gravity="center"
+                        android:paddingLeft="25.0dip"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:text="@string/rate_app"
+                        android:layout_weight="1.0"
+                        style="@style/TextViewStyleBlack"
+                        />
+                </LinearLayout>
+                <View android:background="@color/LineGrey"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dip"
+                    />
+                <LinearLayout android:orientation="horizontal"
+                    android:id="@+id/lnSendFeedBack"
+                    android:background="@drawable/selector_list_view_one"
+                    android:clickable="true"
+                    android:layout_width="fill_parent"
+                    android:layout_height="70.0dip">
+                    <ImageView android:layout_gravity="center"
+                        android:layout_width="35.0dip"
+                        android:layout_height="35.0dip"
+                        android:layout_marginLeft="15.0dip"
+                        android:src="@drawable/ic_feedback_new"
+                        android:contentDescription="@string/no_image"
+                        />
+                    <TextView android:textColor="@color/SettingTextColor"
+                        android:layout_gravity="center"
+                        android:paddingLeft="25.0dip"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:text="@string/send_feed_back"
+                        android:layout_weight="1.0"
+                        style="@style/TextViewStyleBlack"
+                        />
+                </LinearLayout>
+                <View android:background="@color/LineGrey"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dip"
+                    />
+                <LinearLayout android:orientation="horizontal"
+                    android:id="@+id/lnAbout"
+                    android:background="@drawable/selector_list_view_one"
+                    android:clickable="true"
+                    android:layout_width="fill_parent"
+                    android:layout_height="70.0dip">
+                    <ImageView android:layout_gravity="center"
+                        android:layout_width="35.0dip"
+                        android:layout_height="35.0dip"
+                        android:layout_marginLeft="15.0dip"
+                        android:src="@drawable/ic_infomation_new"
+                        android:contentDescription="@string/no_image"
+                        />
+                    <TextView android:textColor="@color/SettingTextColor"
+                        android:layout_gravity="center"
+                        android:paddingLeft="25.0dip"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:text="@string/product_information"
+                        android:layout_weight="1.0"
+                        style="@style/TextViewStyleBlack"
+                        />
+                </LinearLayout>
+                <View android:background="@color/LineGrey"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dip"
+                    />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</RelativeLayout>

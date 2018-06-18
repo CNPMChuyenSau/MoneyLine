@@ -1,0 +1,185 @@
+
+
+
+
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="fill_parent">
+
+    <LinearLayout android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/MainThuChi">
+
+        <ScrollView android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout android:gravity="center"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:id="@+id/linear_layout_header_parent_view"
+                    android:background="@color/BarHeader"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50.0dip"
+                    android:baselineAligned="false">
+                    <LinearLayout android:gravity="center"
+                        android:id="@+id/linear_layout_show_list_transaction"
+                        android:background="@drawable/selector_button_save_gray"
+                        android:paddingLeft="5.0dip"
+                        android:layout_marginStart="5dp"
+                        android:paddingRight="5.0dip"
+                        android:clickable="true"
+                        android:layout_width="44.0dip"
+                        android:layout_height="35.0dip"
+                        android:focusable="true">
+                        <ImageView android:id="@+id/image_view_history_transaction"
+                            android:clickable="false"
+                            android:layout_width="50.0dip"
+                            android:layout_height="35.0dip"
+
+                            android:src="@drawable/transaction_book"
+                            android:contentDescription="@string/no_image"
+                            />
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center"
+                        android:id="@+id/linear_layout_cancel_transaction"
+                        android:background="@drawable/selector_button_back"
+                        android:paddingLeft="10.0dip"
+                        android:paddingRight="10.0dip"
+                        android:visibility="gone"
+                        android:clickable="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50.0dip"
+                        android:minWidth="50.0dip"
+                        android:focusable="true">
+                        <TextView android:clickable="false"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Cancel"
+                            style="@style/TextHeaderAction"
+                            />
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center"
+                        android:id="@+id/linear_layout_cancel_widget_transaction"
+                        android:background="@drawable/selector_button_back"
+                        android:paddingLeft="10.0dip"
+                        android:paddingRight="10.0dip"
+                        android:visibility="gone"
+                        android:clickable="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50.0dip"
+                        android:minWidth="50.0dip"
+                        android:focusable="true">
+                        <TextView android:clickable="false"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Cancel"
+                            style="@style/TextHeaderAction"
+                            />
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center_vertical"
+                        android:layout_gravity="center"
+                        android:orientation="vertical"
+                        android:clickable="true"
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_marginStart="5.0dip"
+                        android:layout_marginEnd="10.0dip"
+                        android:layout_weight="1.0"
+                        android:focusable="true">
+                        <LinearLayout android:gravity="center_horizontal"
+                            android:layout_gravity="center"
+                            android:orientation="horizontal"
+                            android:id="@+id/linear_layout_select_menu_control"
+                            android:background="@drawable/selector_button_save_gray"
+                            android:clickable="false"
+                            android:layout_width="fill_parent"
+                            android:layout_height="35.0dip">
+                            <TextSwitcher
+                                android:id="@+id/textSwitcher"
+                                android:layout_width="fill_parent"
+                                android:layout_height="40dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="50dp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center"
+                        android:id="@+id/linear_layout_save_transaction"
+                        android:background="@drawable/selector_button_save_gray"
+                        android:clickable="true"
+                        android:paddingEnd="-7dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35.0dip"
+                        android:layout_marginEnd="10.0dip"
+                        android:focusable="true">
+                        <ImageView android:id="@+id/image_view_save_transaction"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/save_icon_button"
+                            style="@style/TextHeaderAction"
+                            />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+        <RelativeLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+            <android.support.design.widget.TabLayout
+                android:background="@color/BarHeader"
+                android:layout_alignParentTop="true"
+                android:id="@+id/tab_layout"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                app:tabSelectedTextColor="#ffffff"
+                app:tabTextColor="#35766f"
+                android:visibility="gone"
+                >
+            </android.support.design.widget.TabLayout>
+
+
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/view_pager_income"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+    <FrameLayout
+        android:id="@+id/fragment_control_income"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+    </FrameLayout>
+
+
+    <FrameLayout
+        android:id="@+id/fragment_control_income_in_right"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+    </FrameLayout>
+    <FrameLayout
+        android:id="@+id/fragment_control_income_right"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+    </FrameLayout>
+
+</RelativeLayout>

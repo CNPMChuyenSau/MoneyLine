@@ -1,0 +1,230 @@
+<?xml version="1.0"
+    encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    android:background="@color/background_from"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal"
+            android:id="@+id/lnHead"
+            android:background="@color/background_register_login"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false">
+            <TextView android:gravity="center"
+                android:id="@+id/btnCancel"
+                android:background="@drawable/selector_button_back"
+                android:paddingLeft="5.0dip"
+                android:paddingRight="5.0dip"
+                android:layout_width="60.0dip"
+                android:layout_height="50.0dip"
+                android:text="@string/Cancel"
+                style="@style/TextHeaderAction"
+                />
+            <TextView android:gravity="center_horizontal"
+                android:layout_gravity="center"
+                android:id="@+id/txtHeader"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                style="@style/TextHeader"
+                />
+            <TextView android:gravity="center"
+                android:id="@+id/button_save"
+                android:background="@drawable/selector_button_save_gray"
+                android:layout_width="50.0dip"
+                android:layout_height="30.0dip"
+                android:layout_marginRight="10.0dip"
+                android:text="@string/Save"
+                style="@style/TextHeaderAction"
+                />
+        </LinearLayout>
+    </ScrollView>
+    <ScrollView android:layout_width="wrap_content"
+        android:layout_height="0.0dip"
+
+        android:layout_weight="0.86">
+        <LinearLayout android:orientation="vertical"
+            android:background="@color/background_from"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical"
+                android:background="@drawable/custom_edit_money"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginTop="10.0dip"
+                android:layout_marginRight="10.0dip">
+                <LinearLayout android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+                    <TextView android:gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10.0dip"
+                        android:text="@string/Name"
+                        style="@style/form_edit_title"
+                        />
+                    <AutoCompleteTextView android:gravity="center|right"
+                        android:id="@+id/txtShoppingItemName"
+                        android:background="@color/white"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10.0dip"
+                        android:layout_marginTop="5.0dip"
+                        android:layout_marginRight="5.0dip"
+                        android:layout_marginBottom="5.0dip"
+                        android:minHeight="44.0dip"
+                        android:hint="@string/ItemNameHint"
+                        android:completionThreshold="1"
+                        android:layout_weight="1.0"
+                        android:inputType="textCapSentences"
+                        android:imeOptions="actionNext"
+                        style="@style/form_edit_value"
+                        />
+                    <ImageView android:id="@+id/image_view_delete_event"
+                        android:background="@drawable/clear_edit"
+                        android:visibility="gone"
+                        android:layout_width="26.0dip"
+                        android:layout_height="26.0dip"
+                        android:layout_marginRight="5.0dip"
+                        android:contentDescription="@string/no_image"
+                        />
+                </LinearLayout>
+                <View android:background="@color/Line"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0dip"
+                    />
+                <LinearLayout android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="50.0dip">
+                    <TextView android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10.0dip"
+                        android:text="@string/Description"
+                        style="@style/TextViewStyleBlack"
+                        />
+                </LinearLayout>
+                <View android:background="@color/Line"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0dip"
+                    />
+                <LinearLayout android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:id="@+id/lnIsHaveTo"
+                    android:clickable="true"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="50.0dip">
+                    <TextView android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10.0dip"
+                        android:text="@string/NeedToBuy"
+                        android:layout_weight="1.0"
+                        style="@style/TextViewStyleBlack"
+                        />
+                    <CheckBox android:id="@+id/cbIsHaveTo"
+                        android:clickable="false"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10.0dip"
+                        />
+                </LinearLayout>
+                <View android:background="@color/Line"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0dip"
+                    />
+                <LinearLayout android:gravity="center"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    android:id="@+id/lnShoppingGroup"
+                    android:background="@drawable/selector_list_view_one"
+                    android:clickable="true"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2.0dip"
+                    android:layout_marginRight="2.0dip"
+                    android:layout_marginBottom="1.0dip">
+                    <TextView android:clickable="false"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10.0dip"
+                        android:text="@string/ItemGroup"
+                        style="@style/form_edit_title"
+                        />
+                    <TextView android:gravity="center|right"
+                        android:id="@+id/txtShoppingGroup"
+                        android:clickable="false"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5.0dip"
+                        android:layout_marginTop="5.0dip"
+                        android:layout_marginBottom="5.0dip"
+                        android:minHeight="44.0dip"
+                        android:layout_weight="1.0"
+                        style="@style/form_edit_value"
+                        />
+                    <ImageView android:layout_gravity="center_vertical"
+                        android:clickable="false"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5.0dip"
+                        android:src="@drawable/disclosure"
+                        android:contentDescription="@string/no_image"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false">
+        <LinearLayout android:gravity="center"
+            android:id="@+id/lnSaveAndNew"
+            android:background="@drawable/selector_button_green"
+            android:layout_width="0.0dip"
+            android:layout_height="40.0dip"
+            android:layout_margin="10.0dip"
+            android:layout_weight="1.0">
+            <ImageView android:layout_width="25.0dip"
+                android:layout_height="20.0dip"
+                android:src="@drawable/save_icon_button"
+                android:contentDescription="@string/no_image"
+                />
+            <TextView android:gravity="center_vertical"
+                android:id="@+id/txtSaveAndNew"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/text_view_style"
+                />
+        </LinearLayout>
+        <LinearLayout android:gravity="center"
+            android:id="@+id/btnDelete"
+            android:background="@drawable/selector_button_red"
+            android:visibility="gone"
+            android:layout_width="0.0dip"
+            android:layout_height="40.0dip"
+            android:layout_margin="10.0dip"
+            android:layout_weight="1.0">
+            <ImageView android:layout_width="25.0dip"
+                android:layout_height="20.0dip"
+                android:src="@drawable/back_trash"
+                android:contentDescription="@string/no_image"
+                />
+            <TextView android:gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/delete"
+                style="@style/text_view_style"
+                />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

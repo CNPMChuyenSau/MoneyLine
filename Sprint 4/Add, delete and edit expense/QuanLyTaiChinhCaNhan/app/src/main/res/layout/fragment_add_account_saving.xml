@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/selector_list_view_one"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/LinearLayoutChiMain"
+            >
+
+            <ScrollView android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout android:gravity="center_horizontal"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10.0dip">
+
+                    <ScrollView android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        tools:ignore="NestedScrolling">
+                        <RelativeLayout android:orientation="horizontal"
+                            android:background="@color/BarHeader"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content">
+                            <LinearLayout android:gravity="center"
+                                android:id="@+id/lnBack"
+                                android:background="@drawable/selector_button_back"
+                                android:paddingRight="10.0dip"
+                                android:clickable="true"
+                                android:layout_width="wrap_content"
+                                android:layout_height="50.0dip"
+                                android:baselineAligned="false"
+                                android:layout_alignParentLeft="true"
+                                tools:ignore="RtlHardcoded,RtlSymmetry">
+                                <ImageView android:padding="10.0dip"
+                                    android:id="@+id/back_button"
+                                    android:layout_width="50.0dip"
+                                    android:layout_height="50.0dip"
+                                    android:src="@drawable/back_button"
+                                    android:contentDescription="@string/ContentDescriptionImageNull"
+                                    />
+                            </LinearLayout>
+                            <TextView android:id="@+id/txtTermHead"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/insert_account"
+                                android:layout_centerInParent="true"
+                                style="@style/TextHeader"
+                                />
+                            <Button android:textColor="@color/white"
+                                android:id="@+id/btnDone"
+                                android:background="@drawable/selector_button_save_gray"
+                                android:visibility="gone"
+                                android:layout_width="50.0dip"
+                                android:layout_height="30.0dip"
+                                android:layout_marginRight="10.0dip"
+                                android:text="@string/Done"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                style="@style/TextHeaderAction"
+                                />
+                        </RelativeLayout>
+                    </ScrollView>
+
+                    <LinearLayout android:gravity="center_horizontal"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10.0dip"
+                        android:layout_marginBottom="10.0dip">
+                        <LinearLayout android:orientation="vertical"
+                            android:background="@drawable/custom_edit_money"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10.0dip"
+                            android:layout_marginTop="10.0dip"
+                            android:layout_marginRight="10.0dip">
+
+                            <LinearLayout android:gravity="center"
+                                android:layout_gravity="center"
+                                android:orientation="horizontal"
+                                android:id="@+id/lnSelectAccountName"
+                                android:background="@drawable/selector_list_view_one"
+                                android:clickable="true"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="2.0dip"
+                                android:layout_marginTop="1.0dip"
+                                android:layout_marginRight="2.0dip">
+                                <TextView android:clickable="false"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10.0dip"
+                                    android:id="@+id/textViewAccountName"
+                                    android:text="@string/account_name"
+                                    style="@style/form_edit_title"
+                                    />
+                                <TextView android:gravity="center|right"
+                                    android:id="@+id/txtName"
+                                    android:clickable="false"
+                                    android:layout_width="0.0dip"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10.0dip"
+                                    android:layout_marginTop="5.0dip"
+                                    android:layout_marginRight="5.0dip"
+                                    android:layout_marginBottom="5.0dip"
+                                    android:minHeight="44.0dip"
+                                    android:layout_weight="1.0"
+                                    style="@style/form_edit_value"
+                                    />
+
+
+
+                                <ImageView android:layout_gravity="center_vertical"
+                                    android:clickable="false"
+                                    android:layout_width="wrap_content"
+                                    android:id="@+id/image_hint"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="5.0dip"
+                                    android:src="@drawable/disclosure"
+                                    android:contentDescription="@string/no_image"
+                                    />
+                            </LinearLayout>
+
+                            <View android:id="@+id/lnRelation"
+                                android:background="@color/Line"
+                                android:layout_width="fill_parent"
+                                android:layout_height="1.0dip"
+                                android:layout_marginLeft="1.0dip"
+                                android:layout_marginRight="1.0dip"
+                                />
+
+                            <View android:background="@color/Line"
+                                android:layout_width="fill_parent"
+                                android:layout_height="1.0dip"
+                                android:layout_marginLeft="1.0dip"
+                                android:layout_marginRight="1.0dip"
+                                />
+                            <LinearLayout android:gravity="center_vertical"
+                                android:layout_gravity="center"
+                                android:orientation="horizontal"
+                                android:id="@+id/lnTpye"
+                                android:background="@drawable/selector_list_view_one"
+                                android:clickable="true"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="2.0dip"
+                                android:layout_marginRight="2.0dip"
+                                android:layout_marginBottom="1.0dip">
+
+                                <TextView android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10.0dip"
+                                    android:text="@string/Type"
+                                    style="@style/form_edit_title"
+                                    android:id="@+id/textView5" />
+
+                                <TextView android:gravity="center|right"
+                                    android:id="@+id/txtTypeAccount"
+                                    android:clickable="false"
+                                    android:layout_width="0.0dip"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10.0dip"
+                                    android:layout_marginTop="5.0dip"
+                                    android:layout_marginRight="5.0dip"
+                                    android:layout_marginBottom="5.0dip"
+                                    android:minHeight="44.0dip"
+                                    android:layout_weight="1.0"
+                                    style="@style/form_edit_value"
+                                    />
+                                <ImageView android:layout_gravity="center_vertical"
+                                    android:clickable="false"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="5.0dip"
+                                    android:src="@drawable/disclosure"
+                                    android:contentDescription="@string/no_image"
+                                    android:id="@+id/imageViewGhiChu" />
+                            </LinearLayout>
+                            <View android:background="@color/Line"
+                                android:layout_width="fill_parent"
+                                android:layout_height="1.0dip"
+                                android:layout_marginLeft="1.0dip"
+                                android:layout_marginRight="1.0dip"
+                                />
+
+
+
+                            <View android:background="@color/Line"
+                                android:layout_width="fill_parent"
+                                android:layout_height="1.0dip"
+                                android:layout_marginLeft="1.0dip"
+                                android:layout_marginRight="1.0dip"
+                                />
+                        </LinearLayout>
+
+
+                        <LinearLayout android:orientation="vertical"
+                            android:background="@drawable/custom_edit_money"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10.0dip"
+                            android:layout_marginTop="10.0dip"
+                            android:layout_marginRight="10.0dip">
+
+                            <LinearLayout android:gravity="center"
+                                android:layout_gravity="center"
+                                android:orientation="horizontal"
+                                android:id="@+id/lnSelectDateSaving"
+                                android:background="@drawable/selector_list_view_one"
+                                android:clickable="true"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="2.0dip"
+                                android:layout_marginTop="1.0dip"
+                                android:layout_marginRight="2.0dip">
+                                <TextView android:clickable="false"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10.0dip"
+                                    android:id="@+id/textViewDateSaving"
+                                    android:text="@string/date_saving"
+                                    style="@style/form_edit_title"
+                                    />
+                                <TextView android:gravity="center|right"
+                                    android:id="@+id/txtDateSaving"
+                                    android:clickable="false"
+                                    android:layout_width="0.0dip"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10.0dip"
+                                    android:layout_marginTop="5.0dip"
+                                    android:layout_marginRight="5.0dip"
+                                    android:layout_marginBottom="5.0dip"
+                                    android:minHeight="44.0dip"
+                                    android:layout_weight="1.0"
+                                    style="@style/form_edit_value"
+                                    />
+
+
+
+                                <ImageView android:layout_gravity="center_vertical"
+                                    android:clickable="false"
+                                    android:layout_width="wrap_content"
+                                    android:id="@+id/image_hint"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="5.0dip"
+                                    android:src="@drawable/disclosure"
+                                    android:contentDescription="@string/no_image"
+                                    />
+                            </LinearLayout>
+
+                            <View android:id="@+id/lnRelation"
+                                android:background="@color/Line"
+                                android:layout_width="fill_parent"
+                                android:layout_height="1.0dip"
+                                android:layout_marginLeft="1.0dip"
+                                android:layout_marginRight="1.0dip"
+                                />
+
+                            <View android:background="@color/Line"
+                                android:layout_width="fill_parent"
+                                android:layout_height="1.0dip"
+                                android:layout_marginLeft="1.0dip"
+                                android:layout_marginRight="1.0dip"
+                                />
+                            <LinearLayout android:gravity="center_vertical"
+                                android:layout_gravity="center"
+                                android:orientation="horizontal"
+                                android:id="@+id/lnperiod"
+                                android:background="@drawable/selector_list_view_one"
+                                android:clickable="true"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="2.0dip"
+                                android:layout_marginRight="2.0dip"
+                                android:layout_marginBottom="1.0dip">
+                                <TextView android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10.0dip"
+                                    android:text="@string/lnperiod"
+                                    style="@style/form_edit_title"
+                                    />
+                                <TextView android:gravity="center|right"
+                                    android:id="@+id/txtperiod"
+                                    android:clickable="false"
+                                    android:layout_width="0.0dip"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10.0dip"
+                                    android:layout_marginTop="5.0dip"
+                                    android:layout_marginRight="5.0dip"
+                                    android:layout_marginBottom="5.0dip"
+                                    android:minHeight="44.0dip"
+                                    android:layout_weight="1.0"
+                                    style="@style/form_edit_value"
+                                    />
+                                <ImageView android:layout_gravity="center_vertical"
+                                    android:clickable="false"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="5.0dip"
+                                    android:src="@drawable/disclosure"
+                                    android:contentDescription="@string/no_image"
+                                    android:id="@+id/imageViewGhiChu" />
+                            </LinearLayout>
+                            <View android:background="@color/Line"
+                                android:layout_width="fill_parent"
+                                android:layout_height="1.0dip"
+                                android:layout_marginLeft="1.0dip"
+                                android:layout_marginRight="1.0dip"
+                                />
+
+                            <LinearLayout android:gravity="center"
+                                android:layout_gravity="center"
+                                android:orientation="horizontal"
+                                android:id="@+id/lnSelectinterest"
+                                android:background="@drawable/selector_list_view_one"
+                                android:clickable="true"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="2.0dip"
+                                android:layout_marginTop="1.0dip"
+                                android:layout_marginRight="2.0dip">
+                                <TextView android:clickable="false"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10.0dip"
+                                    android:id="@+id/AccountFrom"
+                                    android:text="@string/tinterest"
+                                    style="@style/form_edit_title"
+                                    />
+
+                                <EditText android:gravity="center|right"
+                                    android:id="@+id/EditTexttinterest"
+                                    android:background="@color/white"
+                                    android:layout_width="0dp"
+                                    android:layout_height="50dp"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="numberDecimal"
+                                    android:maxLength="5"
+                                    android:layout_weight="1"
+                                    style="@style/form_edit_value"
+                                    />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:text="@string/phantram"
+                                    android:layout_marginRight="10dp"
+                                    android:textStyle="bold"
+                                    android:textSize="25dp"
+                                    android:textColor="@color/background_color"
+                                    android:gravity="center"/>
+
+                            </LinearLayout>
+
+                            <View android:background="@color/Line"
+                                android:layout_width="fill_parent"
+                                android:layout_height="1.0dip"
+                                android:layout_marginLeft="1.0dip"
+                                android:layout_marginRight="1.0dip"
+                                />
+                            <LinearLayout android:gravity="center"
+                                android:layout_gravity="center"
+                                android:orientation="horizontal"
+                                android:id="@+id/lnSelectGhiChu"
+                                android:background="@drawable/selector_list_view_one"
+                                android:clickable="true"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="2.0dip"
+                                android:layout_marginTop="1.0dip"
+                                android:layout_marginRight="2.0dip">
+                                <TextView android:clickable="false"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10.0dip"
+                                    android:id="@+id/AccountFrom"
+                                    android:text="@string/GhiChu"
+                                    style="@style/form_edit_title"
+                                    />
+
+                                <EditText android:gravity="center|right"
+                                    android:id="@+id/EditTextDescription"
+                                    android:background="@color/white"
+                                    android:layout_marginRight="15dp"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:minHeight="50.0dip"
+                                    style="@style/form_edit_value"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="textCapSentences|textMultiLine"
+                                    />
+
+                            </LinearLayout>
+                            <View android:background="@color/Line"
+                                android:layout_width="fill_parent"
+                                android:layout_height="1.0dip"
+                                android:layout_marginLeft="1.0dip"
+                                android:layout_marginRight="1.0dip"
+                                />
+                        </LinearLayout>
+                        <LinearLayout android:orientation="horizontal"
+                            android:id="@+id/linear_layout_select_calculator"
+                            android:layout_marginTop="20dp"
+                            android:background="@drawable/custom_edit_money"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10.0dip"
+                            android:layout_marginRight="10.0dip">
+                            <TextView android:gravity="center|right"
+                                android:id="@+id/text_view_edit_money"
+                                android:layout_width="0.0dip"
+                                android:layout_height="fill_parent"
+                                android:layout_margin="5.0dip"
+                                android:layout_weight="1.0"
+                                style="@style/form_edit_value"
+                                android:textSize="30dp"
+                                android:hint="@string/so_tien_gui" />
+                            <Button android:textSize="20.0sp"
+                                android:textStyle="bold"
+                                android:layout_gravity="center_vertical"
+                                android:id="@+id/button_symbol"
+                                android:background="@drawable/selector_common_gray"
+                                android:paddingLeft="5.0dip"
+                                android:paddingRight="5.0dip"
+                                android:layout_width="wrap_content"
+                                android:layout_height="40.0dip"
+                                android:layout_marginTop="10.0dip"
+                                android:layout_marginRight="5.0dip"
+                                android:layout_marginBottom="10.0dip"
+                                android:minWidth="40.0dip"
+                                />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <LinearLayout android:gravity="center"
+                            android:id="@+id/lnAddAndNew"
+                            android:background="@drawable/selector_button_green"
+                            android:clickable="true"
+                            android:layout_width="fill_parent"
+                            android:layout_height="50.0dip"
+                            android:layout_margin="10.0dip"
+                            android:layout_weight="1.0">
+                            <ImageView android:layout_width="25.0dip"
+                                android:layout_height="20.0dip"
+                                android:src="@drawable/save_icon_button"
+                                android:contentDescription="@string/no_image"
+                                />
+                            <TextView android:gravity="center_vertical"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/button_edit"
+                                android:text="@string/SaveAndNew"
+                                style="@style/text_view_style"
+                                />
+
+                        </LinearLayout>
+                        <LinearLayout android:gravity="center"
+                            android:id="@+id/lnDelete"
+                            android:visibility="gone"
+                            android:background="@drawable/selector_button_green"
+                            android:clickable="true"
+                            android:layout_width="fill_parent"
+                            android:layout_height="50.0dip"
+                            android:layout_margin="10.0dip"
+                            android:layout_weight="1.0">
+                            <ImageView android:layout_width="25.0dip"
+                                android:layout_height="20.0dip"
+                                android:src="@android:drawable/ic_menu_delete"
+                                android:contentDescription="@string/no_image"
+                                />
+                            <TextView android:gravity="center_vertical"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/delete"
+                                style="@style/text_view_style"
+                                />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+            </ScrollView>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

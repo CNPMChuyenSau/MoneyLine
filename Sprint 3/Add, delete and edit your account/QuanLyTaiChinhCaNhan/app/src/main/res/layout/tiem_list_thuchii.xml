@@ -1,0 +1,93 @@
+<?xml version="1.0"
+    encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:background="@drawable/selector_list_view_one"
+    android:padding="10.0dip"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout android:orientation="vertical"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0">
+        <LinearLayout android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3.0dip">
+            <TextView android:gravity="center|left"
+                android:id="@+id/txtRecurringName"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5.0dip"
+                android:singleLine="true"
+                android:layout_weight="0.55"
+                style="@style/TransactionListViewItem"
+                android:text="Chi: đi chợ" />
+            <TextView android:gravity="center|right"
+                android:id="@+id/txtRecurringValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5.0dip"
+                android:singleLine="true"
+                android:text="100000d"
+                style="@style/TransactionListViewItem"
+                />
+
+        </LinearLayout>
+        <TextView android:textColor="@color/black"
+            android:id="@+id/txtDescription"
+            android:visibility="gone"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            style="@style/TransactionListViewItemNormal"
+            />
+        <LinearLayout android:layout_gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3.0dip">
+            <TextView android:gravity="center|left"
+                android:id="@+id/txtTransactionDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5.0dip"
+                android:singleLine="true"
+                style="@style/TextViewStyleLableSmall"
+                />
+            <TextView android:gravity="center|left"
+                android:id="@+id/txtGhiChu"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5.0dip"
+                android:minWidth="100.0dip"
+                android:singleLine="true"
+                android:layout_weight="0.8"
+                android:text="Đoạn này là ghi chú"
+                style="@style/TransactionListViewItemNormal"
+                />
+            <TextView android:gravity="center|left"
+                android:id="@+id/text_view_account_name"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5.0dip"
+                android:minWidth="100.0dip"
+                android:singleLine="true"
+                android:layout_weight="0.2"
+                android:text="ATM"
+                style="@style/TransactionListViewItemNormal"
+                />
+            <ImageView android:layout_gravity="top"
+                android:id="@+id/imgWallet"
+                android:layout_width="24.0dip"
+                android:layout_height="24.0dip"
+                android:layout_marginLeft="5.0dip"
+                android:src="@drawable/wallet"
+                android:contentDescription="@string/no_image"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

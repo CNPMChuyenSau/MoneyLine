@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">QuanLyTaiChinhCaNhan</string>
+    <string name="no_log_in">No connect</string>
+    // login activity
+    <string name="login">LOGIN/SIGN UP</string>
+    <string name="username">User name</string>
+    <string name="password">Password</string>
+    <string name="forgetpassword">Forget password</string>
+    <string name="usinggoogle">Use with google account</string>
+    <string name="createacc">Create account</string>
+
+    <string name="confirmpass">Confirm password</string>
+
+</resources>

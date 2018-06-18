@@ -1,0 +1,561 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <LinearLayout
+        android:id="@+id/loginlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:id="@+id/login_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="50dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="@string/login"
+                android:textColor="@color/white_greyish"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/login_emailid"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@android:color/transparent"
+                android:drawableLeft="@drawable/email"
+                android:drawablePadding="8dp"
+                android:gravity="center_vertical"
+                android:hint="@string/email"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:padding="10dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="16sp"
+                tools:ignore="RtlHardcoded" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="@color/white_greyish" />
+
+            <EditText
+                android:id="@+id/login_password"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:drawableLeft="@drawable/password"
+                android:drawablePadding="8dp"
+                android:gravity="center_vertical"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:padding="10dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="16sp"
+                tools:ignore="RtlHardcoded" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="5dp"
+                android:paddingTop="8dp">
+
+                <CheckBox
+                    android:id="@+id/show_hide_password"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/show_pwd"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/forgot_password"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:padding="5dp"
+
+                    android:text="@string/forgot"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <com.andexert.library.RippleView
+                android:id="@+id/loginBtn"
+                rv_centered="true"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:clickable="true"
+                android:focusable="true">
+                <TextView
+                    android:background="@drawable/login_button_selector"
+                    android:textColor="#009688"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    android:padding="3dp"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:text="@string/login"
+                    android:layout_height="42dp" />
+            </com.andexert.library.RippleView>
+
+            <TextView
+                android:id="@+id/createAccount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="@string/newUser"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+            <com.andexert.library.RippleView
+                android:id="@+id/btnLoginNotAccount"
+                rv_centered="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true">
+
+                <TextView
+                    tools:ignore="HardcodedText"
+                    android:background="@drawable/login_button_selector"
+                    android:textColor="#009688"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    android:padding="3dp"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:text="ĐĂNG NHẬP KHÔNG CẦN TÀI KHOẢN"
+                    android:layout_height="42dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true"
+                    android:id="@+id/textView8" />
+            </com.andexert.library.RippleView>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/keycode"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background_color"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_weight="1.0"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtNotePasscode"
+                style="@style/TextViewStyleBlack"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20.0dip"
+                android:layout_weight="1.0"
+                android:gravity="center"
+                android:text="@string/input_pass_code" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="60.0dip"
+                android:layout_marginTop="10.0dip"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="60.0dip"
+                    android:layout_height="60.0dip"
+                    android:layout_marginEnd="15.0dip"
+                    android:background="@drawable/button_corner_pass_code"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/imgPassCode1"
+                        android:layout_width="25.0dip"
+                        android:layout_height="25.0dip"
+                        android:background="@color/white"
+                        android:contentDescription="@string/no_image"
+                        android:src="@drawable/pass_code_circle"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="60.0dip"
+                    android:layout_height="60.0dip"
+                    android:layout_marginEnd="15.0dip"
+                    android:background="@drawable/button_corner_pass_code"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/imgPassCode2"
+                        android:layout_width="25.0dip"
+                        android:layout_height="25.0dip"
+                        android:background="@color/white"
+                        android:contentDescription="@string/no_image"
+                        android:src="@drawable/pass_code_circle"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="60.0dip"
+                    android:layout_height="60.0dip"
+                    android:layout_marginEnd="15.0dip"
+                    android:background="@drawable/button_corner_pass_code"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/imgPassCode3"
+                        android:layout_width="25.0dip"
+                        android:layout_height="25.0dip"
+                        android:background="@color/white"
+                        android:contentDescription="@string/no_image"
+                        android:src="@drawable/pass_code_circle"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="60.0dip"
+                    android:layout_height="60.0dip"
+                    android:background="@drawable/button_corner_pass_code"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/imgPassCode4"
+                        android:layout_width="25.0dip"
+                        android:layout_height="25.0dip"
+                        android:background="@color/white"
+                        android:contentDescription="@string/no_image"
+                        android:src="@drawable/pass_code_circle"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtResult"
+                style="@style/TransactionListViewItemNormal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10.0dip"
+                android:layout_weight="1.0"
+                android:gravity="center|top" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_gravity="bottom"
+            android:layout_weight="1.0"
+            android:orientation="vertical"
+            android:padding="4.0dip">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0.0dip"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="4.0dip"
+                android:layout_weight="1.0"
+                android:gravity="bottom"
+                android:orientation="horizontal">
+
+
+                <com.andexert.library.RippleView
+                    android:id="@+id/btnKey1"
+                    rv_centered="true"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_marginEnd="4.0dip"
+                    android:layout_weight="0.99"
+                    android:background="@color/background_Huy"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <TextView
+                        style="@style/KeyPassCode"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="@string/Key1" />
+                </com.andexert.library.RippleView>
+
+                <com.andexert.library.RippleView
+                    android:id="@+id/btnKey2"
+                    rv_centered="true"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_marginEnd="4.0dip"
+                    android:layout_weight="1.0"
+                    android:background="@color/background_Huy"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <TextView
+                        style="@style/KeyPassCode"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="@string/Key2" />
+                </com.andexert.library.RippleView>
+
+                <com.andexert.library.RippleView
+                    android:id="@+id/btnKey3"
+                    style="@style/KeyPassCode"
+                    rv_centered="true"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:background="@color/background_Huy"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <TextView
+                        style="@style/KeyPassCode"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="@string/Key3" />
+                </com.andexert.library.RippleView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0.0dip"
+                android:layout_marginBottom="4.0dip"
+                android:layout_weight="1.0"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.andexert.library.RippleView
+                    android:id="@+id/btnKey4"
+                    style="@style/KeyPassCode"
+                    rv_centered="true"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_marginEnd="4.0dip"
+                    android:layout_weight="1.0"
+                    android:background="@color/background_Huy"
+                    android:clickable="true"
+                    android:text="@string/Key4"
+                    android:focusable="true">
+
+                    <TextView
+                        style="@style/KeyPassCode"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="@string/Key4" />
+                </com.andexert.library.RippleView>
+
+                <com.andexert.library.RippleView
+                    android:id="@+id/btnKey5"
+                    style="@style/KeyPassCode"
+                    rv_centered="true"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_marginEnd="4.0dip"
+                    android:layout_weight="1.0"
+                    android:background="@color/background_Huy"
+                    android:clickable="true"
+                    android:text="@string/Key5"
+                    android:focusable="true">
+
+                    <TextView
+                        style="@style/KeyPassCode"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="@string/Key5" />
+                </com.andexert.library.RippleView>
+
+                <com.andexert.library.RippleView
+                    android:id="@+id/btnKey6"
+                    style="@style/KeyPassCode"
+                    rv_centered="true"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:background="@color/background_Huy"
+                    android:clickable="true"
+                    android:text="@string/Key6"
+                    android:focusable="true">
+
+                    <TextView
+                        style="@style/KeyPassCode"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="@string/Key6" />
+                </com.andexert.library.RippleView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0.0dip"
+                android:layout_marginBottom="4.0dip"
+                android:layout_weight="1.0"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.andexert.library.RippleView
+                    android:id="@+id/btnKey7"
+                    style="@style/KeyPassCode"
+                    rv_centered="true"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_marginEnd="4.0dip"
+                    android:layout_weight="1.0"
+                    android:background="@color/background_Huy"
+                    android:clickable="true"
+                    android:text="@string/Key7"
+                    android:focusable="true">
+                    <TextView
+                        style="@style/KeyPassCode"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="@string/Key7" />
+                </com.andexert.library.RippleView>
+
+                <com.andexert.library.RippleView
+                    android:id="@+id/btnKey8"
+                    style="@style/KeyPassCode"
+                    rv_centered="true"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_marginEnd="4.0dip"
+                    android:layout_weight="1.0"
+                    android:background="@color/background_Huy"
+                    android:clickable="true"
+                    android:text="@string/Key8"
+                    android:focusable="true">
+
+                    <TextView
+                        style="@style/KeyPassCode"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="@string/Key8" />
+                </com.andexert.library.RippleView>
+
+                <com.andexert.library.RippleView
+                    android:id="@+id/btnKey9"
+                    style="@style/KeyPassCode"
+                    rv_centered="true"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:background="@color/background_Huy"
+                    android:clickable="true"
+                    android:text="@string/Key9"
+                    android:focusable="true">
+
+                    <TextView
+                        style="@style/KeyPassCode"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="@string/Key9" />
+                </com.andexert.library.RippleView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0.0dip"
+                android:layout_gravity="bottom"
+                android:layout_weight="1.0"
+                android:gravity="center"
+                android:orientation="horizontal">
+                <com.andexert.library.RippleView
+                    style="@style/KeyPassCode"
+                    rv_centered="true"
+                    android:id="@+id/oke"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0">
+                    <TextView
+
+                        style="@style/form_edit_value"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginEnd="4.0dip"
+                        android:background="#4e3a333b"
+                        android:gravity="center"
+                        android:text="OK"
+                        android:textSize="23sp" />
+                </com.andexert.library.RippleView>
+
+
+                <com.andexert.library.RippleView
+                    android:id="@+id/btnKey0"
+                    style="@style/KeyPassCode"
+                    rv_centered="true"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_marginEnd="4.0dip"
+                    android:layout_weight="1.0"
+                    android:background="@color/background_Huy"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <TextView
+                        android:id="@+id/textView7"
+                        style="@style/KeyPassCode"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:gravity="center"
+                        android:text="@string/Key0" />
+                </com.andexert.library.RippleView>
+                <com.andexert.library.RippleView
+                    style="@style/KeyPassCode"
+                    rv_centered="true"
+                    android:id="@+id/btnKeyBack"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0">
+                    <ImageButton
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0"
+                        android:background="#4e3a333b"
+                        android:contentDescription="@string/no_image"
+                        android:src="@drawable/ic_action_backspace" />
+                </com.andexert.library.RippleView>
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/forget_password"
+                style="@style/form_edit_value"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:text="@string/forget_password"
+                android:textColor="#fff" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

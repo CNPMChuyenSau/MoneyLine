@@ -1,0 +1,79 @@
+<?xml version="1.0"
+    encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    android:background="@color/background_from"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:scrollbars="none"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center_vertical"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal"
+            android:background="@color/BarHeader"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout android:gravity="center"
+                android:id="@+id/button_back"
+                android:background="@drawable/selector_button_back"
+                android:paddingLeft="10.0dip"
+                android:paddingRight="10.0dip"
+                android:clickable="true"
+                android:layout_width="wrap_content"
+                android:layout_height="50.0dip"
+                android:minWidth="50.0dip">
+                <TextView android:clickable="false"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Cancel"
+                    style="@style/TextHeaderAction"
+                    android:id="@+id/txtCancel" />
+            </LinearLayout>
+            <TextView android:textColor="@color/white"
+                android:gravity="center"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:text="@string/Description"
+                android:layout_weight="1.0"
+                style="@style/TextHeader"
+                />
+            <LinearLayout android:gravity="center"
+                android:id="@+id/lnDone"
+                android:background="@drawable/selector_button_back"
+                android:paddingLeft="10.0dip"
+                android:paddingRight="10.0dip"
+                android:clickable="true"
+                android:layout_width="wrap_content"
+                android:layout_height="50.0dip"
+                android:minWidth="50.0dip">
+                <TextView android:clickable="false"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Done"
+                    style="@style/TextHeaderAction"
+                    android:id="@+id/txtDone" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <ScrollView android:padding="10.0dip"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_weight="1.0">
+        <LinearLayout android:orientation="horizontal"
+            android:background="@drawable/custom_edit_money"
+            android:padding="5.0dip"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <EditText android:gravity="center|left|top"
+                android:id="@+id/EditTextDescription"
+                android:background="@color/white"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="80.0dip"
+                android:singleLine="false"
+                android:inputType="textCapSentences|textMultiLine"
+                />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

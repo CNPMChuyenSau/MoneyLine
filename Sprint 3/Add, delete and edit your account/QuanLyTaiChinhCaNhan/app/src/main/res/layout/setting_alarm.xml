@@ -1,0 +1,126 @@
+<?xml version="1.0"
+    encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal"
+            android:id="@+id/lnHead"
+            android:background="@color/background_register_login"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false">
+            <ImageView android:id="@+id/button_back"
+                android:background="@drawable/selector_button_back"
+                android:padding="10.0dip"
+                android:clickable="false"
+                android:layout_width="50.0dip"
+                android:layout_height="50.0dip"
+                android:src="@drawable/back_button"
+                android:contentDescription="@string/no_image"
+                />
+            <TextView android:gravity="center"
+                android:layout_gravity="center"
+                android:id="@+id/txtAlarm"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="50.0dip"
+                android:text="@string/reminder_input"
+                android:layout_weight="1.0"
+                style="@style/TextHeader"
+                />
+        </LinearLayout>
+    </ScrollView>
+    <ScrollView android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_weight="1.0">
+        <LinearLayout android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout android:gravity="center"
+                android:orientation="vertical"
+                android:background="@color/white"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+                <ImageView android:layout_gravity="center_horizontal"
+                    android:layout_width="110.0dip"
+                    android:layout_height="110.0dip"
+                    android:src="@drawable/oclock"
+                    android:contentDescription="@string/no_image"
+                    />
+                <TextView android:gravity="center"
+                    android:id="@+id/txt_User_mail"
+                    android:paddingLeft="20.0dip"
+                    android:paddingTop="10.0dip"
+                    android:paddingRight="20.0dip"
+                    android:paddingBottom="15.0dip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ReminderInputMessage"
+                    style="@style/TextViewStyleLableSmall"
+                    />
+            </LinearLayout>
+            <View android:background="@color/gray"
+                android:layout_width="fill_parent"
+                android:layout_height="1.0dip"
+                />
+            <LinearLayout android:orientation="vertical"
+                android:background="@color/white"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout android:gravity="center_vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50.0dip">
+                    <TextView android:id="@+id/txtNhacNhaplieu"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10.0dip"
+                        android:text="@string/reminder_input"
+                        android:layout_weight="1.0"
+                        style="@style/TextViewStyleLableSmall"
+                        />
+                    <ToggleButton android:id="@+id/tbtnAlarm"
+                        android:background="@drawable/toggle_button"
+                        android:layout_width="60.0dip"
+                        android:layout_height="30.0dip"
+                        android:layout_marginRight="10.0dip"
+                        android:button="@null"
+                        android:textOn=""
+                        android:textOff=""
+                        />
+                </LinearLayout>
+                <View android:id="@+id/lineAlarm"
+                    android:background="@color/gray"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0dip"
+                    />
+                <LinearLayout android:gravity="center_vertical"
+                    android:id="@+id/lnAlarm"
+                    android:background="@drawable/selector_list_view_one"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50.0dip">
+                    <TextView android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10.0dip"
+                        android:text="@string/AtTime"
+                        android:layout_weight="1.0"
+                        style="@style/TextViewStyleLableSmall"
+                        />
+                    <TextView android:id="@+id/txt_SetTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="20.0dip"
+                        style="@style/TextViewStyleBlack"
+                        />
+                </LinearLayout>
+                <View android:background="@color/gray"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0dip"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

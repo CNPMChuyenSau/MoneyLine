@@ -1,0 +1,102 @@
+<?xml version="1.0"
+    encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <TextView android:gravity="center"
+            android:background="#ff50bcb6"
+            android:layout_width="fill_parent"
+            android:layout_height="44.0dip"
+            android:text="Thêm hạng mục cha"
+            style="@style/TextHeader"
+            />
+
+        <LinearLayout android:orientation="vertical"
+            android:background="@drawable/custom_edit_money"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10.0dip">
+            <LinearLayout android:gravity="center"
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:id="@+id/lnFromDate"
+                android:background="@drawable/selector_list_view_one"
+                android:clickable="true"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2.0dip">
+                <EditText android:gravity="center|left"
+                    android:id="@+id/txtShoppingListName"
+                    android:background="@color/white"
+                    android:clickable="false"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5.0dip"
+                    android:minHeight="44.0dip"
+                    android:hint="Tên hạng mục"
+                    android:layout_weight="1.0"
+                    style="@style/form_edit_value"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false">
+            <LinearLayout android:gravity="center"
+                android:id="@+id/button_save"
+                android:background="@drawable/selector_button_green"
+                android:layout_width="0.0dip"
+                android:layout_height="40.0dip"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginTop="30.0dip"
+                android:layout_marginRight="10.0dip"
+                android:layout_marginBottom="20.0dip"
+                android:layout_weight="1.0">
+                <ImageView android:layout_width="25.0dip"
+                    android:layout_height="20.0dip"
+                    android:src="@drawable/save_icon_button"
+                    android:contentDescription="@string/no_image"
+                    />
+                <TextView android:gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Save"
+                    style="@style/text_view_style"
+                    />
+            </LinearLayout>
+            <LinearLayout android:gravity="center"
+                android:id="@+id/btnDelete"
+                android:background="@drawable/selector_button_red"
+                android:visibility="gone"
+                android:layout_width="0.0dip"
+                android:layout_height="40.0dip"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginTop="30.0dip"
+                android:layout_marginRight="10.0dip"
+                android:layout_marginBottom="20.0dip"
+                android:layout_weight="1.0">
+                <ImageView android:layout_width="25.0dip"
+                    android:layout_height="20.0dip"
+                    android:src="@drawable/back_trash"
+                    android:contentDescription="@string/no_image"
+                    />
+                <TextView android:gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/delete"
+                    style="@style/text_view_style"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

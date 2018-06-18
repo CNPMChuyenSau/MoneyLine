@@ -1,0 +1,55 @@
+<?xml version="1.0"
+    encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:background="@drawable/selector_list_view_one"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center"
+        android:orientation="horizontal"
+        android:background="@drawable/square"
+        android:layout_width="25.0dip"
+        android:layout_height="25.0dip"
+        android:layout_marginLeft="10.0dip">
+        <ImageView android:id="@+id/imgCheckedShoppingItem"
+            android:layout_width="25.0dip"
+            android:layout_height="25.0dip"
+            android:layout_marginLeft="5.0dip"
+            android:layout_marginBottom="2.0dip"
+            android:src="@drawable/item_check"
+            android:contentDescription="@string/no_image"
+            />
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:layout_width="0.0dip"
+        android:layout_height="50.0dip"
+        android:layout_marginLeft="10.0dip"
+        android:layout_weight="1.0">
+        <TextView android:id="@+id/txtShoppingItemName"
+            android:background="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ten"
+            android:singleLine="true"
+            style="@style/ReportNormal"
+            />
+        <TextView android:textSize="13.0sp"
+            android:textColor="@color/DescriptionColor"
+            android:id="@+id/txtShoppingItemDes"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="dien giai"
+            android:singleLine="true"
+            />
+    </LinearLayout>
+    <ImageView android:id="@+id/imgEditShoppingItem"
+        android:background="@drawable/selector_image_edit"
+        android:layout_width="50.0dip"
+        android:layout_height="50.0dip"
+        android:layout_marginRight="2.0dip"
+        android:contentDescription="@string/ContentDescriptionImageNull"
+        />
+</LinearLayout>

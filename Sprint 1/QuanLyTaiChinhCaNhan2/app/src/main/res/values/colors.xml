@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="mainBackground">#009688</color>
+    <color name="black">#000</color>
+    <color name="white">#fff</color>
+
+    <color name="xamtrang">#d4d4d4</color>
+    <color name="btnlogin">#004b44</color>
+    <color name="yallow1">#e39b35</color>
+    <color name="red1">#e00b00</color>
+</resources>

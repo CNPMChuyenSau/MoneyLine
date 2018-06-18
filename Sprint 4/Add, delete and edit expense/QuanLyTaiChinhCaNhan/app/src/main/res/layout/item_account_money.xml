@@ -1,0 +1,51 @@
+<?xml version="1.0"
+    encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    android:background="@drawable/selector_list_view_one"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingTop="5.0dip"
+        android:paddingBottom="5.0dip"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <ImageView android:layout_width="50.0dip"
+            android:layout_height="50.0dip"
+            android:layout_marginStart="10.0dip"
+            android:src="@drawable/account_wallet"
+            android:contentDescription="@string/ContentDescriptionImageNull"
+            android:id="@+id/image_view_wallet_account" />
+        <LinearLayout android:orientation="vertical"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0">
+
+            <TextView android:id="@+id/txtAmount"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                style="@style/text_view_current_account_blue"
+                />
+            <TextView android:textSize="15.0sp"
+                android:id="@+id/text_view_change_amount"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                style="@style/TextViewCurrentAccount"
+                />
+        </LinearLayout>
+        <LinearLayout android:gravity="right"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView android:id="@+id/image_view_edit_account"
+                android:background="@drawable/selector_image_edit"
+                android:layout_width="50.0dip"
+                android:layout_height="50.0dip"
+                android:layout_marginEnd="2.0dip"
+                android:contentDescription="@string/ContentDescriptionImageNull"
+                />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

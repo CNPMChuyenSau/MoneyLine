@@ -1,0 +1,199 @@
+<?xml version="1.0"
+    encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout android:gravity="center"
+        android:orientation="horizontal"
+        android:id="@+id/imgLogo"
+        android:layout_width="fill_parent"
+        android:layout_height="55.0dip"
+        android:layout_marginTop="10.0dip"
+        android:layout_marginBottom="10.0dip">
+
+        <TextView android:textSize="25.0dip"
+            android:textStyle="bold"
+            android:textColor="@color/BarHeader"
+            android:id="@+id/txtQuanLyThuCHi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5.0dip"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Quản lý chi tiêu"
+            android:id="@+id/textView" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical"
+        android:id="@+id/center"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imgLogo">
+        <TextView android:gravity="center_horizontal"
+            android:id="@+id/txtOldUser"
+            android:visibility="gone"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20.0dip"
+            android:layout_marginRight="20.0dip"
+            android:layout_marginBottom="20.0dip"
+            android:singleLine="false"
+            style="@style/form_edit_title"
+            />
+        <LinearLayout android:orientation="vertical"
+            android:background="@drawable/custom_edit_money"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="10.0dip"
+            android:layout_marginRight="10.0dip">
+            <LinearLayout android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+                <ImageView android:id="@+id/imgUse"
+                    android:layout_width="40.0dip"
+                    android:layout_height="40.0dip"
+                    android:layout_margin="3.0dip"
+                    android:src="@drawable/account_login"
+                    />
+                <EditText android:gravity="center|left"
+                    android:layout_gravity="center_horizontal"
+                    android:id="@+id/editEmail"
+                    android:background="@color/clear"
+                    android:paddingLeft="3.0dip"
+                    android:layout_width="0.0dip"
+                    android:layout_height="50.0dip"
+                    android:layout_marginLeft="5.0dip"
+                    android:layout_marginRight="5.0dip"
+                    android:hint="@string/Email"
+                    android:layout_weight="1.0"
+                    android:inputType="textEmailAddress"
+                    style="@style/ButtonStyleBlack">
+                    <requestFocus />
+                </EditText>
+            </LinearLayout>
+            <View android:id="@+id/seperator"
+                android:background="@color/Line"
+                android:layout_width="fill_parent"
+                android:layout_height="1.0dip"
+                />
+            <LinearLayout android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+                <ImageView android:layout_width="40.0dip"
+                    android:layout_height="40.0dip"
+                    android:layout_margin="3.0dip"
+                    android:src="@drawable/key_login"
+                    />
+                <EditText android:gravity="center|left"
+                    android:id="@+id/editPass"
+                    android:background="@color/clear"
+                    android:padding="3.0dip"
+                    android:layout_width="0.0dip"
+                    android:layout_height="50.0dip"
+                    android:layout_marginLeft="5.0dip"
+                    android:layout_marginRight="5.0dip"
+                    android:hint="@string/Password"
+                    android:ems="10"
+                    android:layout_weight="1.0"
+                    android:inputType="textPassword"
+                    android:imeOptions="actionDone"
+                    style="@style/ButtonStyleBlack"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+        <Button android:id="@+id/btnlogin"
+            android:background="@drawable/selector_button_green"
+            android:layout_width="fill_parent"
+            android:layout_height="40.0dip"
+            android:layout_marginLeft="10.0dip"
+            android:layout_marginTop="20.0dip"
+            android:layout_marginRight="10.0dip"
+            android:text="@string/Login"
+            style="@style/ButtonStyleWhile"
+            />
+        <LinearLayout android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10.0dip"
+            android:layout_marginTop="10.0dip"
+            android:layout_marginRight="10.0dip">
+            <LinearLayout android:id="@+id/btnRegister"
+                android:background="@drawable/custom_edit_money"
+                android:layout_width="0.0dip"
+                android:layout_height="40.0dip"
+                android:layout_marginRight="10.0dip"
+                android:layout_weight="1.0">
+                <TextView android:textColor="@color/BarHeader"
+                    android:gravity="center"
+                    android:background="@drawable/selector_list_view_one"
+                    android:clickable="false"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_margin="2.0dip"
+                    android:text="@string/register"
+                    android:id="@+id/buttondangky" />
+            </LinearLayout>
+            <LinearLayout android:id="@+id/txtForgotPassWord"
+                android:background="@drawable/custom_edit_money"
+                android:clickable="false"
+                android:layout_width="0.0dip"
+                android:layout_height="40.0dip"
+                android:layout_weight="1.0">
+                <TextView android:textColor="@color/BarHeader"
+                    android:gravity="center"
+                    android:background="@drawable/selector_list_view_one"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_margin="2.0dip"
+                    android:text="@string/ForgotPassword"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:gravity="center"
+            android:orientation="horizontal"
+            android:id="@+id/lnOrLoginSocial"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10.0dip">
+            <View android:background="@color/Line"
+                android:layout_width="0.0dip"
+                android:layout_height="1.0dip"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginRight="10.0dip"
+                android:layout_weight="1.0"
+                />
+            <TextView android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/or"
+                style="@style/ReportSmall"
+                />
+
+            <View android:background="@color/Line"
+                android:layout_width="0.0dip"
+                android:layout_height="1.0dip"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginRight="10.0dip"
+                android:layout_weight="1.0"
+                />
+        </LinearLayout>
+
+
+        </LinearLayout>
+
+    <ImageView android:id="@+id/imgInfo"
+        android:background="@drawable/login_info"
+        android:layout_width="30.0dip"
+        android:layout_height="30.0dip"
+        android:layout_marginBottom="10.0dip"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/no_image"
+        />
+</RelativeLayout>

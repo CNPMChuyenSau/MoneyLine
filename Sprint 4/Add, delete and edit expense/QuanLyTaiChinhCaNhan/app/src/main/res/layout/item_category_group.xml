@@ -1,0 +1,57 @@
+<?xml version="1.0"
+    encoding="utf-8"?>
+<LinearLayout
+    android:gravity="center_vertical"
+    android:layout_gravity="center_vertical"
+    android:orientation="horizontal"
+    android:background="@drawable/selector_list_view_gray"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:id="@+id/linear_layout_indicator"
+        android:clickable="true"
+        android:layout_width="40.0dip"
+        android:layout_height="50.0dip"
+        android:focusable="true">
+        <ImageView
+            android:layout_gravity="center_vertical"
+            android:id="@+id/image_indicator"
+            android:background="@drawable/selector_group_indicator"
+            android:clickable="false"
+            android:layout_width="20.0dip"
+            android:layout_height="20.0dip"
+            android:layout_marginStart="10.0dip"
+            android:contentDescription="@string/no_image"
+            android:src="@drawable/group_expand" />
+    </LinearLayout>
+
+    <TextView
+        android:gravity="center|start"
+        android:id="@+id/header"
+        android:layout_width="0.0dip"
+        android:layout_height="50.0dip"
+        android:layout_weight="1.0"
+        style="@style/group_expand_title" />
+
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="20.0dip"
+        android:layout_height="20.0dip"
+        android:layout_marginStart="10.0dip"
+        android:layout_marginEnd="5.0dip"
+        android:background="@drawable/check"
+        android:id="@+id/linear_layout_checked">
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imgExpenseLock"
+        android:visibility="gone"
+        android:layout_width="20.0dip"
+        android:layout_height="20.0dip"
+        android:layout_marginEnd="20.0dip"
+        android:src="@drawable/category_locked"
+        android:contentDescription="@string/no_image" />
+</LinearLayout>

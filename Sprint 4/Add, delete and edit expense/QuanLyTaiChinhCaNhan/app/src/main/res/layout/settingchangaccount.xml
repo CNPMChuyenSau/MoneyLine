@@ -1,0 +1,131 @@
+<?xml version="1.0"
+    encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal"
+        android:id="@+id/lnHead"
+        android:background="@color/background_register_login"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false">
+        <ImageView android:id="@+id/button_back"
+            android:background="@drawable/selector_button_back"
+            android:padding="10.0dip"
+            android:clickable="false"
+            android:layout_width="50.0dip"
+            android:layout_height="50.0dip"
+            android:src="@drawable/back_button"
+            android:contentDescription="@string/no_image"
+            />
+        <TextView android:gravity="center"
+            android:layout_gravity="center"
+            android:id="@+id/txtCurrency"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10.0dip"
+            android:layout_marginRight="50.0dip"
+            android:text="@string/SettingChangeUserName"
+            android:layout_weight="1.0"
+            style="@style/TextHeader"
+            />
+    </LinearLayout>
+    <ScrollView android:background="@color/background_from"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="10.0dip"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+                <TextView android:id="@+id/txtChangeUserNameNote"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    style="@style/ReportNormal"
+                    />
+            </LinearLayout>
+            <TextView android:id="@+id/txtOldUserName"
+                android:paddingLeft="10.0dip"
+                android:paddingRight="10.0dip"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10.0dip"
+                style="@style/ReportBold"
+                />
+            <LinearLayout android:orientation="horizontal"
+                android:background="@drawable/custom_edit_money"
+                android:padding="2.0dip"
+                android:layout_width="fill_parent"
+                android:layout_height="50.0dip"
+                android:layout_margin="10.0dip">
+                <TextView android:gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="5.0dip"
+                    android:text="@string/SettingNewUserName"
+                    style="@style/ReportNormal"
+                    />
+                <EditText android:gravity="center|right"
+                    android:id="@+id/txtNewUserName"
+                    android:background="@color/white"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_margin="5.0dip"
+                    android:hint="@string/SettingNewUserNameHint"
+                    android:inputType="textEmailAddress"
+                    style="@style/ReportNormal"
+                    />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal"
+                android:background="@drawable/custom_edit_money"
+                android:padding="2.0dip"
+                android:layout_width="fill_parent"
+                android:layout_height="50.0dip"
+                android:layout_margin="10.0dip">
+                <TextView android:gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="5.0dip"
+                    android:text="@string/SettingChangeUserNameConfirmPassWord"
+                    style="@style/ReportNormal"
+                    />
+                <EditText android:gravity="center|right"
+                    android:id="@+id/txtConfirmPassWord"
+                    android:background="@color/white"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_margin="5.0dip"
+                    android:hint="@string/Password"
+                    android:inputType="textPassword"
+                    style="@style/ReportNormal"
+                    />
+            </LinearLayout>
+            <LinearLayout android:gravity="center"
+                android:id="@+id/lnSave"
+                android:background="@drawable/selector_button_green"
+                android:layout_width="fill_parent"
+                android:layout_height="40.0dip"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginTop="30.0dip"
+                android:layout_marginRight="10.0dip"
+                android:layout_marginBottom="20.0dip">
+                <ImageView android:layout_width="25.0dip"
+                    android:layout_height="20.0dip"
+                    android:src="@drawable/save_icon_button"
+                    android:contentDescription="@string/no_image"
+                    />
+                <TextView android:gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/SettingChangeUserName"
+                    style="@style/text_view_style"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,561 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/selector_list_view_one"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+        <ScrollView android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout android:gravity="center"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:id="@+id/linear_layout_header_parent_view"
+                    android:background="@color/BarHeader"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50.0dip"
+                    android:baselineAligned="false">
+                    <LinearLayout
+                        android:gravity="center"
+                        android:id="@+id/linear_layout_show_list_transaction"
+                        android:background="@drawable/selector_button_save_gray"
+                        android:paddingLeft="5.0dip"
+                        android:layout_marginStart="5dp"
+                        android:paddingRight="5.0dip"
+                        android:clickable="true"
+                        android:layout_width="44.0dip"
+                        android:layout_height="35.0dip"
+                        android:focusable="true">
+                        <ImageView
+                            android:id="@+id/image_view_history_transaction"
+                            android:clickable="false"
+                            android:layout_width="50.0dip"
+                            android:layout_height="35.0dip"
+
+                            android:src="@drawable/transaction_book"
+                            android:contentDescription="@string/no_image"
+                            />
+                    </LinearLayout>
+
+
+                    <LinearLayout android:gravity="center_vertical"
+                        android:layout_gravity="center"
+                        android:orientation="vertical"
+                        android:clickable="true"
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_marginStart="5.0dip"
+                        android:layout_marginEnd="10.0dip"
+                        android:layout_weight="1.0"
+                        android:focusable="true">
+                        <LinearLayout android:gravity="center_horizontal"
+                            android:layout_gravity="center"
+                            android:orientation="horizontal"
+                            android:id="@+id/linear_layout_select_menu_control"
+                            android:background="@drawable/selector_button_save_gray"
+                            android:clickable="true"
+                            android:layout_width="fill_parent"
+                            android:layout_height="35.0dip"
+                            android:focusable="true">
+                            <TextSwitcher
+                                android:id="@+id/text_switcher_update"
+                                android:layout_width="fill_parent"
+                                android:layout_height="40dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="50dp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:gravity="center"
+                        android:id="@+id/linear_layout_save_transaction"
+                        android:background="@drawable/selector_button_save_gray"
+                        android:clickable="true"
+                        android:paddingEnd="-7dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35.0dip"
+                        android:layout_marginEnd="10.0dip"
+                        android:focusable="true">
+                        <ImageButton
+                            android:id="@+id/image_view_save_transaction"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/save_icon_button"
+                            style="@style/TextHeaderAction" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+        <RelativeLayout android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/LinearLayoutChiMain">
+
+            <ScrollView android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout android:gravity="center_horizontal"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10.0dip">
+
+                    <RadioGroup
+                        android:gravity="center_horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="15dp">
+
+                    </RadioGroup>
+
+                    <LinearLayout android:gravity="center_horizontal"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10.0dip"
+                        android:layout_marginBottom="10.0dip">
+                        <LinearLayout android:orientation="vertical"
+                            android:background="@drawable/custom_edit_money"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10.0dip"
+                            android:layout_marginTop="10.0dip"
+                            android:layout_marginRight="10.0dip">
+                            <LinearLayout android:gravity="center"
+                                android:layout_gravity="center"
+                                android:visibility="gone"
+                                android:orientation="horizontal"
+                                android:id="@+id/linear_layout_select_for"
+                                android:background="@drawable/selector_list_view_one"
+                                android:clickable="true"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="2.0dip"
+                                android:layout_marginTop="1.0dip"
+                                android:layout_marginRight="2.0dip"
+                                android:focusable="true">
+                                <TextView android:clickable="false"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10.0dip"
+                                    android:text="@string/NguoiVay"
+                                    style="@style/form_edit_title"
+                                    />
+                                <TextView
+                                    android:gravity="center|end"
+                                    android:id="@+id/txtFor"
+                                    android:clickable="false"
+                                    android:layout_width="0.0dip"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10.0dip"
+                                    android:layout_marginTop="5.0dip"
+                                    android:layout_marginEnd="5.0dip"
+                                    android:layout_marginBottom="5.0dip"
+                                    android:minHeight="44.0dip"
+                                    android:layout_weight="1.0"
+                                    style="@style/form_edit_value"
+                                    />
+                                <ImageView
+                                    android:layout_gravity="center_vertical"
+                                    android:clickable="false"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="5.0dip"
+                                    android:src="@drawable/disclosure"
+                                    android:contentDescription="@string/no_image"
+                                    />
+                            </LinearLayout>
+                            <LinearLayout
+                                android:gravity="center"
+                                android:layout_gravity="center"
+                                android:orientation="horizontal"
+                                android:id="@+id/lnSelectCategory"
+                                android:background="@drawable/selector_list_view_one"
+                                android:clickable="true"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="2.0dip"
+                                android:layout_marginTop="1.0dip"
+                                android:layout_marginRight="2.0dip"
+                                android:focusable="true">
+                                <TextView
+                                    android:clickable="false"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10.0dip"
+                                    android:id="@+id/textViewExpenseFor"
+                                    android:text="@string/ExpenseFor"
+                                    style="@style/form_edit_title"
+                                    />
+                                <TextView
+                                    android:gravity="center|end"
+                                    android:id="@+id/txtExpenseType"
+                                    android:clickable="false"
+                                    android:layout_width="0.0dip"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10.0dip"
+                                    android:layout_marginTop="5.0dip"
+                                    android:layout_marginEnd="5.0dip"
+                                    android:layout_marginBottom="5.0dip"
+                                    android:minHeight="44.0dip"
+                                    android:layout_weight="1.0"
+                                    style="@style/form_edit_value"
+                                    />
+
+                                <Spinner
+
+                                    android:layout_width="0.0dip"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10.0dip"
+                                    android:layout_marginTop="5.0dip"
+                                    android:layout_marginEnd="5.0dip"
+                                    android:layout_marginBottom="5.0dip"
+                                    android:minHeight="44.0dip"
+                                    android:layout_weight="1.0"
+                                    android:spinnerMode="dialog"
+                                    android:id="@+id/spinnerMuc"
+                                    style="@style/form_edit_value"
+                                  />
+
+                                <ImageView
+                                    android:layout_gravity="center_vertical"
+                                    android:clickable="false"
+                                    android:layout_width="wrap_content"
+                                    android:id="@+id/image_hint"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="5.0dip"
+                                    android:src="@drawable/disclosure"
+                                    android:contentDescription="@string/no_image"
+                                    />
+                            </LinearLayout>
+                            <View android:id="@+id/lnRelation"
+                                android:background="@color/Line"
+                                android:layout_width="fill_parent"
+                                android:layout_height="1.0dip"
+                                android:layout_marginLeft="1.0dip"
+                                android:layout_marginRight="1.0dip"
+                                />
+
+                            <View android:background="@color/Line"
+                                android:layout_width="fill_parent"
+                                android:layout_height="1.0dip"
+                                android:layout_marginLeft="1.0dip"
+                                android:layout_marginRight="1.0dip"
+                                />
+                            <LinearLayout android:gravity="center_vertical"
+                                android:layout_gravity="center"
+                                android:orientation="horizontal"
+                                android:id="@+id/lnDescription"
+                                android:background="@drawable/selector_list_view_one"
+                                android:clickable="true"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="2.0dip"
+                                android:layout_marginRight="2.0dip"
+                                android:layout_marginBottom="1.0dip"
+                                android:focusable="true">
+                                <TextView android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10.0dip"
+                                    android:text="@string/Description"
+                                    style="@style/form_edit_title"
+                                    />
+                                <TextView android:gravity="center|end"
+                                    android:id="@+id/txtDescription"
+                                    android:clickable="false"
+                                    android:layout_width="0.0dip"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10.0dip"
+                                    android:layout_marginTop="5.0dip"
+                                    android:layout_marginEnd="5.0dip"
+                                    android:layout_marginBottom="5.0dip"
+                                    android:minHeight="44.0dip"
+                                    android:layout_weight="1.0"
+                                    style="@style/form_edit_value"
+                                    />
+                                <ImageView android:layout_gravity="center_vertical"
+                                    android:clickable="false"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="5.0dip"
+                                    android:src="@drawable/disclosure"
+                                    android:contentDescription="@string/no_image"
+                                    android:id="@+id/imageViewGhiChu" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+                        <LinearLayout android:orientation="vertical"
+                            android:background="@drawable/custom_edit_money"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10.0dip"
+                            android:layout_marginTop="10.0dip"
+                            android:layout_marginRight="10.0dip">
+                            <LinearLayout android:gravity="center"
+                                android:layout_gravity="center"
+                                android:orientation="horizontal"
+                                android:id="@+id/lnSelectAccount"
+                                android:background="@drawable/selector_list_view_one"
+                                android:clickable="true"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="2.0dip"
+                                android:layout_marginTop="1.0dip"
+                                android:layout_marginRight="2.0dip"
+                                android:focusable="true">
+                                <TextView android:clickable="false"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10.0dip"
+                                    android:id="@+id/AccountFrom"
+                                    android:text="@string/AccountFrom"
+                                    style="@style/form_edit_title"
+                                    />
+                                <TextView android:gravity="center|end"
+                                    android:id="@+id/text_view_account_name"
+                                    android:clickable="false"
+                                    android:layout_width="0.0dip"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10.0dip"
+                                    android:layout_marginTop="5.0dip"
+                                    android:layout_marginEnd="5.0dip"
+                                    android:layout_marginBottom="5.0dip"
+                                    android:minHeight="44.0dip"
+                                    android:layout_weight="1.0"
+                                    style="@style/form_edit_value"
+                                    />
+                                <ImageView android:layout_gravity="center_vertical"
+                                    android:clickable="false"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="5.0dip"
+                                    android:src="@drawable/disclosure"
+                                    android:contentDescription="@string/no_image"
+                                    />
+                            </LinearLayout>
+                            <View android:background="@color/Line"
+                                android:layout_width="fill_parent"
+                                android:layout_height="1.0dip"
+                                android:layout_marginLeft="1.0dip"
+                                android:layout_marginRight="1.0dip"
+                                />
+                            <LinearLayout android:gravity="center"
+                                android:layout_gravity="center"
+                                android:orientation="horizontal"
+                                android:id="@+id/lnSelectDate"
+                                android:background="@drawable/selector_list_view_one"
+                                android:clickable="true"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="2.0dip"
+                                android:layout_marginRight="2.0dip"
+                                android:layout_marginBottom="1.0dip"
+                                android:focusable="true">
+                                <TextView android:clickable="false"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10.0dip"
+                                    android:text="@string/Date"
+                                    style="@style/form_edit_title"
+                                    />
+                                <TextView android:gravity="center|end"
+                                    android:id="@+id/text_view_date"
+                                    android:clickable="false"
+                                    android:layout_width="0.0dip"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10.0dip"
+                                    android:layout_marginTop="5.0dip"
+                                    android:layout_marginEnd="5.0dip"
+                                    android:layout_marginBottom="5.0dip"
+                                    android:minHeight="44.0dip"
+                                    android:layout_weight="1.0"
+                                    style="@style/form_edit_value"
+                                    />
+                                <ImageView android:layout_gravity="center_vertical"
+                                    android:clickable="false"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="5.0dip"
+                                    android:src="@drawable/disclosure"
+                                    android:contentDescription="@string/no_image"
+                                    />
+                            </LinearLayout>
+                            <View android:id="@+id/vExpenseFor"
+                                android:background="@color/Line"
+                                android:layout_width="fill_parent"
+                                android:layout_height="1.0dip"
+                                android:layout_marginLeft="1.0dip"
+                                android:layout_marginRight="1.0dip"
+                                />
+                            <LinearLayout android:gravity="center"
+                                android:layout_gravity="center"
+                                android:orientation="horizontal"
+                                android:id="@+id/lnExpenseFor"
+                                android:background="@drawable/selector_list_view_one"
+                                android:clickable="true"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="2.0dip"
+                                android:layout_marginRight="2.0dip"
+                                android:layout_marginBottom="1.0dip"
+                                android:focusable="true">
+                                <TextView android:clickable="false"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10.0dip"
+                                    android:text="@string/ExpenseForOrther"
+                                    style="@style/form_edit_title"
+                                    />
+                                <TextView android:gravity="center|end"
+                                    android:id="@+id/txtExpenseFor"
+                                    android:clickable="false"
+                                    android:layout_width="0.0dip"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10.0dip"
+                                    android:layout_marginTop="5.0dip"
+                                    android:layout_marginEnd="5.0dip"
+                                    android:layout_marginBottom="5.0dip"
+                                    android:minHeight="44.0dip"
+                                    android:layout_weight="1.0"
+                                    style="@style/form_edit_value"
+                                    />
+                                <ImageView android:layout_gravity="center_vertical"
+                                    android:clickable="false"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="5.0dip"
+                                    android:src="@drawable/disclosure"
+                                    android:contentDescription="@string/no_image"
+                                    />
+                            </LinearLayout>
+                            <View android:id="@+id/vEvent"
+                                android:background="@color/Line"
+                                android:layout_width="fill_parent"
+                                android:layout_height="1.0dip"
+                                android:layout_marginLeft="1.0dip"
+                                android:layout_marginRight="1.0dip"
+                                />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:id="@+id/linear_layout_select_calculator"
+                            android:layout_marginTop="20dp"
+                            android:background="@drawable/custom_edit_money"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10.0dip"
+                            android:layout_marginRight="10.0dip">
+                            <TextView
+                                android:gravity="center|end"
+                                android:id="@+id/text_view_edit_money"
+                                android:layout_width="0.0dip"
+                                android:layout_height="fill_parent"
+                                android:layout_margin="5.0dip"
+                                android:layout_weight="1.0"
+                                style="@style/form_edit_value"
+                                android:textSize="30sp"
+                               android:hint="@string/SoTien" />
+
+                            <Button
+                                android:textSize="20.0sp"
+                                android:textStyle="bold"
+                                android:layout_gravity="center_vertical"
+                                android:id="@+id/button_symbol"
+                                android:background="@drawable/selector_common_gray"
+                                android:paddingLeft="5.0dip"
+                                android:paddingRight="5.0dip"
+                                android:layout_width="wrap_content"
+                                android:layout_height="40.0dip"
+                                android:layout_marginTop="10.0dip"
+                                android:layout_marginEnd="5.0dip"
+                                android:layout_marginBottom="10.0dip"
+                                android:minWidth="40.0dip"
+                                />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:gravity="center"
+        android:id="@+id/lnAddAndNew"
+        android:background="@drawable/selector_button_green"
+        android:clickable="true"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:layout_margin="10.0dip"
+        android:layout_weight="1.0"
+        android:focusable="true">
+
+        <ImageView
+            android:layout_width="25.0dip"
+            android:layout_height="20.0dip"
+            android:src="@drawable/save_icon_button"
+            android:contentDescription="@string/no_image" />
+
+        <TextView android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Edit"
+            style="@style/text_view_style" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:gravity="center"
+        android:id="@+id/lnUpdate"
+        android:background="@drawable/selector_button_green"
+        android:clickable="true"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:layout_margin="10.0dip"
+        android:layout_weight="1.0"
+        android:focusable="true">
+
+        <ImageView android:layout_width="25.0dip"
+            android:layout_height="20.0dip"
+            android:src="@android:drawable/ic_menu_delete"
+            android:contentDescription="@string/no_image"
+            android:id="@+id/imageView2" />
+
+        <TextView android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/delete"
+            style="@style/text_view_style" />
+
+    </LinearLayout>
+</LinearLayout>
+
+
+
+                </LinearLayout>
+            </ScrollView>
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
