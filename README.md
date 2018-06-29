@@ -31,8 +31,8 @@ The purpose of MoneyLine is to manage your finance day-by-day easily only by tou
 ### ScreenShots
 **Home Screen**
 
-<img src="https://github.com/CNPMChuyenSau/MoneyLine/tree/master/ScreenShots/MainScreen.png" width="300"/>
+<img src="https://github.com/CNPMChuyenSau/MoneyLine/tree/master/ScreenShots/MainScreen.png" width="250"/>
 
 **Transaction Screen**
 
-<img src="https://github.com/CNPMChuyenSau/MoneyLine/tree/master/ScreenShots/Transaction.png" width="300"/>
+<img src="https://github.com/CNPMChuyenSau/MoneyLine/tree/master/ScreenShots/Transaction.png" width="250"/>
