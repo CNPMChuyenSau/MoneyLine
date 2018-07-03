@@ -24,15 +24,15 @@ The purpose of MoneyLine is to manage your finance day-by-day easily only by tou
 * Account: Account use for the purposes of income. Such as some bank accounts
 
 **2. Add, Delete and Update Income/Expenses.**
-* Add: You can add your income or expenses.
-* Delete: Delete your income/expenses if you want to delete it.
-* Update: Modify your income/expenses.
-* Besides Add, Delete and Update, There are also funds transfers. Funds transfers are money transfer between bank accounts.
-### ScreenShots
-**Home Screen**
+* *Add*: You can add your income or expenses.
+* *Delete*: Delete your income/expenses if you want to delete it.
+* *Update*: Modify your income/expenses.
+* Besides *Add, Delete and Update*, There are also funds transfers. Funds transfers are money transfer between bank accounts.
+## ScreenShots
+### Home Screen
 
 <img src="https://imgur.com/RIE18mf.png" width="300"/>
 
-**Transaction Screen**
+### Transaction Screen
 
 <img src="https://imgur.com/qkZIyCr.png" width="300"/>
