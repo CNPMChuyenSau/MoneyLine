@@ -19,13 +19,20 @@ The purpose of MoneyLine is to manage your finance day-by-day easily only by tou
 - Author: [group 11th]
 
 ### Feature
-**1. Sign in, Sign out and register.**
-* Register: allow user register a new account with username and password
-* Signin: user must signin with username and password to use app.
-* Forgot password: connect to Firebase service to reset password.
+**1. Create database and account.**
+* Database: SQLite
+* Account: Account use for the purposes of income. Such as some bank accounts
 
-**2. Insert, Delete and Update Earning/Spend.**
-* Insert: You can add your earnings or expenses.
-* Delete: Delete your earnings or spend if you want to delete it.
-* Update: Modify your earnings or spend.
-### ScreenShots
+**2. Add, Delete and Update Income/Expenses.**
+* *Add*: You can add your income or expenses.
+* *Delete*: Delete your income/expenses if you want to delete it.
+* *Update*: Modify your income/expenses.
+* Besides *Add, Delete and Update*, There are also funds transfers. Funds transfers are money transfer between bank accounts.
+## ScreenShots
+### Home Screen
+
+<img src="https://imgur.com/RIE18mf.png" width="300"/>
+
+### Transaction Screen
+
+<img src="https://imgur.com/qkZIyCr.png" width="300"/>
