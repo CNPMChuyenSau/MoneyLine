@@ -36,3 +36,7 @@ The purpose of MoneyLine is to manage your finance day-by-day easily only by tou
 ### Transaction Screen
 
 <img src="https://imgur.com/qkZIyCr.png" width="300"/>
+
+### Other features
+
+<img src="https://imgur.com/Jt9j3w3.png" width="250"/> <img src="https://imgur.com/jQW0Jh3.png" width="250"/> <img src="https://imgur.com/KxNKJq0.png" width="250"/> <img src="https://imgur.com/fQ0pgxr.png" width="250"/> <img src="https://imgur.com/qF6L4FN.png" width="250"/> <img src="https://imgur.com/g6jTDO8.png" width="250"/>
